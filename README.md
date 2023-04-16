@@ -1,0 +1,2 @@
+# SQALoanManagement_Nhom12
+SQALoanManagement
