@@ -1,0 +1,20 @@
+create database sqaloan;
+use sqaloan;
+create table admin (id int primary key auto_increment,username varchar(255) , password varchar(255));
+create table customer (id int primary key auto_increment,name varchar(255),address varchar(255), card_id varchar(255), phonenumber varchar(255), email varchar(255), username varchar(255), password varchar(255), dob varchar(255), gender boolean);
+create table bank_account (id int primary key auto_increment, number varchar(255),  balance bigint, customer_id int, foreign key(customer_id) references customer(id));
+create table interest_detail (id int primary key AUTO_INCREMENT,loan_type boolean ,tenor int,rate float, status int, admin_id int, foreign key(admin_id) references admin(id) );
+create table loan(id int primary key auto_increment, bank_account_id int,foreign key(bank_account_id) references bank_account(id), amount bigint, interest_detail_id int,foreign key(interest_detail_id) references interest_detail(id) , begin_date varchar(255), status boolean);
+create table payment(id int primary key auto_increment, loan_id  int,foreign key(loan_id) references loan(id),  amount_per_month double, interest_per_month double, fine double, status boolean , payment_date varchar(255),  payment_amount bigint, pay_date varchar(255));
+
+insert into admin(username, password) values ("admin", "admin");
+insert into interest_detail(loan_type,tenor,rate,status,admin_id) values (0,3,7,1,1);
+insert into interest_detail(loan_type,tenor,rate,status,admin_id) values (0,6,9,1,1);
+insert into interest_detail(loan_type,tenor,rate,status,admin_id) values (0,9,11,1,1);
+insert into interest_detail(loan_type,tenor,rate,status,admin_id) values (0,12,12,1,1);
+insert into interest_detail(loan_type,tenor,rate,status,admin_id) values (0,24,10,1,1);
+insert into interest_detail(loan_type,tenor,rate,status,admin_id) values (1,3,7.5,1,1);
+insert into interest_detail(loan_type,tenor,rate,status,admin_id) values (1,6,9.5,1,1);
+insert into interest_detail(loan_type,tenor,rate,status,admin_id) values (1,9,11.5,1,1);
+insert into interest_detail(loan_type,tenor,rate,status,admin_id) values (1,12,12.5,1,1);
+insert into interest_detail(loan_type,tenor,rate,status,admin_id) values (1,24,10.5,1,1);
