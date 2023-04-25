@@ -1,0 +1,1295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="14" ignored="0" total="122" passed="108">
+  <reporter-output>
+  </reporter-output>
+  <suite name="SQALoanManagement" duration-ms="1918" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:15Z">
+    <groups>
+    </groups>
+    <test name="DAO.DAOTest" duration-ms="1420" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:15Z">
+      <class name="DAO.DAOTest">
+        <test-method status="PASS" signature="testGetBankAccountByCustomer() throws java.sql.SQLException" name="testGetBankAccountByCustomer" duration-ms="688" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetBankAccountByCustomer -->
+        <test-method status="PASS" signature="testAddCustomer2() throws java.sql.SQLException" name="testAddCustomer2" duration-ms="746" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddCustomer2 -->
+        <test-method status="PASS" signature="testGetCustomerByID() throws java.sql.SQLException" name="testGetCustomerByID" duration-ms="726" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetCustomerByID -->
+        <test-method status="PASS" signature="testGetLoanByID2() throws java.sql.SQLException" name="testGetLoanByID2" duration-ms="837" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetLoanByID2 -->
+        <test-method status="PASS" signature="testGetPaymentByLoanID() throws java.sql.SQLException" name="testGetPaymentByLoanID" duration-ms="794" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPaymentByLoanID -->
+        <test-method status="PASS" signature="testGetAdminByID2() throws java.sql.SQLException" name="testGetAdminByID2" duration-ms="703" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAdminByID2 -->
+        <test-method status="PASS" signature="testGetCustomer2() throws java.sql.SQLException" name="testGetCustomer2" duration-ms="811" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetCustomer2 -->
+        <test-method status="PASS" signature="testAddLoan() throws java.sql.SQLException" name="testAddLoan" duration-ms="861" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddLoan -->
+        <test-method status="PASS" signature="testAddCustomer() throws java.sql.SQLException" name="testAddCustomer" duration-ms="950" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddCustomer -->
+        <test-method status="PASS" signature="testGetBankAccountByID2() throws java.sql.SQLException" name="testGetBankAccountByID2" duration-ms="907" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetBankAccountByID2 -->
+        <test-method status="PASS" signature="testGetCustomerByUsername() throws java.sql.SQLException" name="testGetCustomerByUsername" duration-ms="1040" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetCustomerByUsername -->
+        <test-method status="PASS" signature="testUpdateLoan() throws java.sql.SQLException" name="testUpdateLoan" duration-ms="1029" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateLoan -->
+        <test-method status="PASS" signature="testGetBankAccountByNumber2() throws java.sql.SQLException" name="testGetBankAccountByNumber2" duration-ms="894" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetBankAccountByNumber2 -->
+        <test-method status="PASS" signature="testGetLoanByID() throws java.sql.SQLException" name="testGetLoanByID" duration-ms="972" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetLoanByID -->
+        <test-method status="PASS" signature="testUpdatePaymentFineById() throws java.sql.SQLException" name="testUpdatePaymentFineById" duration-ms="1117" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdatePaymentFineById -->
+        <test-method status="PASS" signature="testAddBankAccount() throws java.sql.SQLException" name="testAddBankAccount" duration-ms="881" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddBankAccount -->
+        <test-method status="PASS" signature="testGetBankAccountByNumber() throws java.sql.SQLException" name="testGetBankAccountByNumber" duration-ms="989" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetBankAccountByNumber -->
+        <test-method status="PASS" signature="testGetInterestDetailByID() throws java.sql.SQLException" name="testGetInterestDetailByID" duration-ms="1055" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetInterestDetailByID -->
+        <test-method status="PASS" signature="testAddInterest() throws java.sql.SQLException" name="testAddInterest" duration-ms="928" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddInterest -->
+        <test-method status="PASS" signature="testAddPayments() throws java.sql.SQLException" name="testAddPayments" duration-ms="1146" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddPayments -->
+        <test-method status="PASS" signature="testUpdatePayment() throws java.sql.SQLException" name="testUpdatePayment" duration-ms="1076" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdatePayment -->
+        <test-method status="PASS" signature="testGetBankAccountByID() throws java.sql.SQLException" name="testGetBankAccountByID" duration-ms="1007" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetBankAccountByID -->
+        <test-method status="PASS" signature="testGetPaymentById2() throws java.sql.SQLException" name="testGetPaymentById2" duration-ms="1231" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPaymentById2 -->
+        <test-method status="PASS" signature="testGetAdminByID() throws java.sql.SQLException" name="testGetAdminByID" duration-ms="1254" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAdminByID -->
+        <test-method status="PASS" signature="testGetPaymentById() throws java.sql.SQLException" name="testGetPaymentById" duration-ms="1219" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPaymentById -->
+        <test-method status="PASS" signature="testAddBankAccount2() throws java.sql.SQLException" name="testAddBankAccount2" duration-ms="1280" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddBankAccount2 -->
+        <test-method status="PASS" signature="testGetInterestDetailAvailableByLoanTypeAndTenor2() throws java.sql.SQLException" name="testGetInterestDetailAvailableByLoanTypeAndTenor2" duration-ms="1324" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetInterestDetailAvailableByLoanTypeAndTenor2 -->
+        <test-method status="PASS" signature="testGetInterestDetailAvailableByLoanTypeAndTenor() throws java.sql.SQLException" name="testGetInterestDetailAvailableByLoanTypeAndTenor" duration-ms="1362" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetInterestDetailAvailableByLoanTypeAndTenor -->
+        <test-method status="PASS" signature="testUpdateBankAccount2() throws java.sql.SQLException" name="testUpdateBankAccount2" duration-ms="1202" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateBankAccount2 -->
+        <test-method status="PASS" signature="testGetLoanByBankAccountID() throws java.sql.SQLException" name="testGetLoanByBankAccountID" duration-ms="1300" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetLoanByBankAccountID -->
+        <test-method status="PASS" signature="testGetBankAccountByCustomer2() throws java.sql.SQLException" name="testGetBankAccountByCustomer2" duration-ms="1189" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetBankAccountByCustomer2 -->
+        <test-method status="PASS" signature="testGetCustomerByID2() throws java.sql.SQLException" name="testGetCustomerByID2" duration-ms="1160" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetCustomerByID2 -->
+        <test-method status="PASS" signature="testCheckID_Card2() throws java.sql.SQLException" name="testCheckID_Card2" duration-ms="1311" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckID_Card2 -->
+        <test-method status="PASS" signature="testGetCustomer() throws java.sql.SQLException" name="testGetCustomer" duration-ms="1374" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetCustomer -->
+        <test-method status="PASS" signature="testGetCustomerByUsername2() throws java.sql.SQLException" name="testGetCustomerByUsername2" duration-ms="1242" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetCustomerByUsername2 -->
+        <test-method status="PASS" signature="testCheckID_Card() throws java.sql.SQLException" name="testCheckID_Card" duration-ms="1349" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckID_Card -->
+        <test-method status="PASS" signature="testGetInterestDetailByID2() throws java.sql.SQLException" name="testGetInterestDetailByID2" duration-ms="1337" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetInterestDetailByID2 -->
+        <test-method status="PASS" signature="testUpdateBankAccount() throws java.sql.SQLException" name="testUpdateBankAccount" duration-ms="1177" started-at="2023-04-25T07:40:13Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testUpdateBankAccount -->
+      </class> <!-- DAO.DAOTest -->
+    </test> <!-- DAO.DAOTest -->
+    <test name="DAO.DatabaseConnectionTest" duration-ms="13" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+      <class name="DAO.DatabaseConnectionTest">
+        <test-method status="PASS" signature="testGetDatabaseConnection()" name="testGetDatabaseConnection" duration-ms="11" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetDatabaseConnection -->
+      </class> <!-- DAO.DatabaseConnectionTest -->
+    </test> <!-- DAO.DatabaseConnectionTest -->
+    <test name="model.AdminTest" duration-ms="2" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+      <class name="model.AdminTest">
+        <test-method status="PASS" signature="testGetPassword()" name="testGetPassword" duration-ms="0" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPassword -->
+        <test-method status="PASS" signature="testSetPassword()" name="testSetPassword" duration-ms="0" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetPassword -->
+        <test-method status="PASS" signature="testSetId()" name="testSetId" duration-ms="0" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetId -->
+        <test-method status="PASS" signature="testGetId()" name="testGetId" duration-ms="0" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetId -->
+        <test-method status="PASS" signature="testSetUsername()" name="testSetUsername" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetUsername -->
+        <test-method status="PASS" signature="testGetUsername()" name="testGetUsername" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUsername -->
+      </class> <!-- model.AdminTest -->
+    </test> <!-- model.AdminTest -->
+    <test name="model.BankAccountTest" duration-ms="2" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+      <class name="model.BankAccountTest">
+        <test-method status="PASS" signature="testSetId()" name="testSetId" duration-ms="0" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetId -->
+        <test-method status="PASS" signature="testSetNumber()" name="testSetNumber" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetNumber -->
+        <test-method status="PASS" signature="testGetBalance()" name="testGetBalance" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetBalance -->
+        <test-method status="PASS" signature="testGetNumber()" name="testGetNumber" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetNumber -->
+        <test-method status="PASS" signature="testSetCustomer()" name="testSetCustomer" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetCustomer -->
+        <test-method status="PASS" signature="testGetId()" name="testGetId" duration-ms="0" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetId -->
+        <test-method status="PASS" signature="testSetBalance()" name="testSetBalance" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetBalance -->
+        <test-method status="PASS" signature="testGetCustomer()" name="testGetCustomer" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetCustomer -->
+      </class> <!-- model.BankAccountTest -->
+    </test> <!-- model.BankAccountTest -->
+    <test name="model.CustomerTest" duration-ms="175" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+      <class name="model.CustomerTest">
+        <test-method status="PASS" signature="testSetPassword()" name="testSetPassword" duration-ms="2" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetPassword -->
+        <test-method status="PASS" signature="testSetPhonenumber()" name="testSetPhonenumber" duration-ms="14" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetPhonenumber -->
+        <test-method status="FAIL" signature="testGetId2()" name="testGetId2" duration-ms="51" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<-1> but was:<0>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<-1> but was:<0>
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:647)
+at org.junit.Assert.assertEquals(Assert.java:633)
+at model.CustomerTest.testGetId2(CustomerTest.java:59)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
+at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
+at org.testng.TestRunner$1.run(TestRunner.java:570)
+at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:717)
+at org.testng.TestRunner.privateRunJUnit(TestRunner.java:601)
+at org.testng.TestRunner.run(TestRunner.java:502)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.TestNG.privateMain(TestNG.java:1354)
+at org.testng.TestNG.main(TestNG.java:1323)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetId2 -->
+        <test-method status="FAIL" signature="testGetAddress2()" name="testGetAddress2" duration-ms="13" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<> but was:<null>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<> but was:<null>
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:120)
+at org.junit.Assert.assertEquals(Assert.java:146)
+at model.CustomerTest.testGetAddress2(CustomerTest.java:160)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
+at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
+at org.testng.TestRunner$1.run(TestRunner.java:570)
+at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:717)
+at org.testng.TestRunner.privateRunJUnit(TestRunner.java:601)
+at org.testng.TestRunner.run(TestRunner.java:502)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.TestNG.privateMain(TestNG.java:1354)
+at org.testng.TestNG.main(TestNG.java:1323)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAddress2 -->
+        <test-method status="FAIL" signature="testSetDob()" name="testSetDob" duration-ms="52" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <exception class="org.junit.ComparisonFailure">
+            <message>
+              <![CDATA[expected:<[28/09/2001]> but was:<[]>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.junit.ComparisonFailure: expected:<[28/09/2001]> but was:<[]>
+at org.junit.Assert.assertEquals(Assert.java:117)
+at org.junit.Assert.assertEquals(Assert.java:146)
+at model.CustomerTest.testSetDob(CustomerTest.java:343)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
+at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
+at org.testng.TestRunner$1.run(TestRunner.java:570)
+at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:717)
+at org.testng.TestRunner.privateRunJUnit(TestRunner.java:601)
+at org.testng.TestRunner.run(TestRunner.java:502)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.TestNG.privateMain(TestNG.java:1354)
+at org.testng.TestNG.main(TestNG.java:1323)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.junit.ComparisonFailure -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetDob -->
+        <test-method status="PASS" signature="testGetAddress1()" name="testGetAddress1" duration-ms="13" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAddress1 -->
+        <test-method status="PASS" signature="testSetName1()" name="testSetName1" duration-ms="171" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetName1 -->
+        <test-method status="PASS" signature="testSetAddress2()" name="testSetAddress2" duration-ms="6" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetAddress2 -->
+        <test-method status="PASS" signature="testSetName2()" name="testSetName2" duration-ms="171" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetName2 -->
+        <test-method status="PASS" signature="testGetPassword()" name="testGetPassword" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPassword -->
+        <test-method status="PASS" signature="testSetUsername()" name="testSetUsername" duration-ms="14" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetUsername -->
+        <test-method status="PASS" signature="testSetEmail()" name="testSetEmail" duration-ms="171" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetEmail -->
+        <test-method status="FAIL" signature="testSetId3()" name="testSetId3" duration-ms="106" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected exception: java.lang.Exception]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected exception: java.lang.Exception
+at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:34)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
+at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
+at org.testng.TestRunner$1.run(TestRunner.java:570)
+at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:717)
+at org.testng.TestRunner.privateRunJUnit(TestRunner.java:601)
+at org.testng.TestRunner.run(TestRunner.java:502)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.TestNG.privateMain(TestNG.java:1354)
+at org.testng.TestNG.main(TestNG.java:1323)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetId3 -->
+        <test-method status="PASS" signature="testIsGender()" name="testIsGender" duration-ms="13" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsGender -->
+        <test-method status="PASS" signature="testSetGender()" name="testSetGender" duration-ms="14" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetGender -->
+        <test-method status="PASS" signature="testGetDob()" name="testGetDob" duration-ms="51" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetDob -->
+        <test-method status="PASS" signature="testGetId1()" name="testGetId1" duration-ms="51" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetId1 -->
+        <test-method status="FAIL" signature="testGetName2()" name="testGetName2" duration-ms="3" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<> but was:<null>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<> but was:<null>
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:120)
+at org.junit.Assert.assertEquals(Assert.java:146)
+at model.CustomerTest.testGetName2(CustomerTest.java:114)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
+at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
+at org.testng.TestRunner$1.run(TestRunner.java:570)
+at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:717)
+at org.testng.TestRunner.privateRunJUnit(TestRunner.java:601)
+at org.testng.TestRunner.run(TestRunner.java:502)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.TestNG.privateMain(TestNG.java:1354)
+at org.testng.TestNG.main(TestNG.java:1323)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetName2 -->
+        <test-method status="PASS" signature="testGetName1()" name="testGetName1" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetName1 -->
+        <test-method status="PASS" signature="testSetCard_id()" name="testSetCard_id" duration-ms="6" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetCard_id -->
+        <test-method status="PASS" signature="testGetEmail()" name="testGetEmail" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetEmail -->
+        <test-method status="PASS" signature="testSetAddress1()" name="testSetAddress1" duration-ms="6" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetAddress1 -->
+        <test-method status="PASS" signature="testGetCard_id()" name="testGetCard_id" duration-ms="14" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetCard_id -->
+        <test-method status="PASS" signature="testGetUsername()" name="testGetUsername" duration-ms="15" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetUsername -->
+        <test-method status="FAIL" signature="testSetId2()" name="testSetId2" duration-ms="106" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Expected exception: java.lang.Exception]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Expected exception: java.lang.Exception
+at org.junit.internal.runners.statements.ExpectException.evaluate(ExpectException.java:34)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
+at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
+at org.testng.TestRunner$1.run(TestRunner.java:570)
+at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:717)
+at org.testng.TestRunner.privateRunJUnit(TestRunner.java:601)
+at org.testng.TestRunner.run(TestRunner.java:502)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.TestNG.privateMain(TestNG.java:1354)
+at org.testng.TestNG.main(TestNG.java:1323)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetId2 -->
+        <test-method status="PASS" signature="testSetId1()" name="testSetId1" duration-ms="105" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetId1 -->
+        <test-method status="PASS" signature="testGetPhonenumber()" name="testGetPhonenumber" duration-ms="171" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPhonenumber -->
+      </class> <!-- model.CustomerTest -->
+    </test> <!-- model.CustomerTest -->
+    <test name="model.InterestDetailTest" duration-ms="3" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+      <class name="model.InterestDetailTest">
+        <test-method status="PASS" signature="testGetAdmin()" name="testGetAdmin" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAdmin -->
+        <test-method status="PASS" signature="testSetId()" name="testSetId" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetId -->
+        <test-method status="PASS" signature="testGetTenor()" name="testGetTenor" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetTenor -->
+        <test-method status="PASS" signature="testGetId()" name="testGetId" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetId -->
+        <test-method status="PASS" signature="testSetRate()" name="testSetRate" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetRate -->
+        <test-method status="PASS" signature="testSetStatus()" name="testSetStatus" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetStatus -->
+        <test-method status="PASS" signature="testGetStatus()" name="testGetStatus" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetStatus -->
+        <test-method status="PASS" signature="testSetLoanType()" name="testSetLoanType" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetLoanType -->
+        <test-method status="PASS" signature="testSetAdmin()" name="testSetAdmin" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetAdmin -->
+        <test-method status="PASS" signature="testSetTenor()" name="testSetTenor" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetTenor -->
+        <test-method status="PASS" signature="testGetRate()" name="testGetRate" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetRate -->
+        <test-method status="PASS" signature="testIsLoanType()" name="testIsLoanType" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsLoanType -->
+      </class> <!-- model.InterestDetailTest -->
+    </test> <!-- model.InterestDetailTest -->
+    <test name="model.LoanTest" duration-ms="26" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+      <class name="model.LoanTest">
+        <test-method status="PASS" signature="testSetAmount()" name="testSetAmount" duration-ms="24" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetAmount -->
+        <test-method status="PASS" signature="testIsStatus()" name="testIsStatus" duration-ms="24" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsStatus -->
+        <test-method status="PASS" signature="testSetBegin_date()" name="testSetBegin_date" duration-ms="24" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetBegin_date -->
+        <test-method status="PASS" signature="testSetStatus()" name="testSetStatus" duration-ms="25" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetStatus -->
+        <test-method status="PASS" signature="testGetBegin_date()" name="testGetBegin_date" duration-ms="23" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetBegin_date -->
+        <test-method status="PASS" signature="testGetId()" name="testGetId" duration-ms="24" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetId -->
+        <test-method status="PASS" signature="testGetAmount()" name="testGetAmount" duration-ms="24" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAmount -->
+        <test-method status="PASS" signature="testSetInterestDetail()" name="testSetInterestDetail" duration-ms="24" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetInterestDetail -->
+        <test-method status="PASS" signature="testSetId()" name="testSetId" duration-ms="24" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetId -->
+        <test-method status="PASS" signature="testGetBankAccount()" name="testGetBankAccount" duration-ms="25" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetBankAccount -->
+        <test-method status="PASS" signature="testSetBankAccount()" name="testSetBankAccount" duration-ms="24" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetBankAccount -->
+        <test-method status="PASS" signature="testGetInterestDetail()" name="testGetInterestDetail" duration-ms="24" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetInterestDetail -->
+      </class> <!-- model.LoanTest -->
+    </test> <!-- model.LoanTest -->
+    <test name="model.PaymentTest" duration-ms="162" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+      <class name="model.PaymentTest">
+        <test-method status="FAIL" signature="testSetId()" name="testSetId" duration-ms="7" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The test case is a prototype.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The test case is a prototype.
+at org.junit.Assert.fail(Assert.java:89)
+at model.PaymentTest.testSetId(PaymentTest.java:63)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
+at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
+at org.testng.TestRunner$1.run(TestRunner.java:570)
+at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:717)
+at org.testng.TestRunner.privateRunJUnit(TestRunner.java:601)
+at org.testng.TestRunner.run(TestRunner.java:502)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.TestNG.privateMain(TestNG.java:1354)
+at org.testng.TestNG.main(TestNG.java:1323)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetId -->
+        <test-method status="PASS" signature="testGetPay_date()" name="testGetPay_date" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPay_date -->
+        <test-method status="PASS" signature="testSetInterest_per_month()" name="testSetInterest_per_month" duration-ms="45" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetInterest_per_month -->
+        <test-method status="PASS" signature="testSetStatus()" name="testSetStatus" duration-ms="46" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetStatus -->
+        <test-method status="FAIL" signature="testSetLoan()" name="testSetLoan" duration-ms="104" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The test case is a prototype.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The test case is a prototype.
+at org.junit.Assert.fail(Assert.java:89)
+at model.PaymentTest.testSetLoan(PaymentTest.java:90)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
+at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
+at org.testng.TestRunner$1.run(TestRunner.java:570)
+at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:717)
+at org.testng.TestRunner.privateRunJUnit(TestRunner.java:601)
+at org.testng.TestRunner.run(TestRunner.java:502)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.TestNG.privateMain(TestNG.java:1354)
+at org.testng.TestNG.main(TestNG.java:1323)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetLoan -->
+        <test-method status="PASS" signature="testGetPayment_amount()" name="testGetPayment_amount" duration-ms="45" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPayment_amount -->
+        <test-method status="FAIL" signature="testGetId()" name="testGetId" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The test case is a prototype.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The test case is a prototype.
+at org.junit.Assert.fail(Assert.java:89)
+at model.PaymentTest.testGetId(PaymentTest.java:50)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
+at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
+at org.testng.TestRunner$1.run(TestRunner.java:570)
+at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:717)
+at org.testng.TestRunner.privateRunJUnit(TestRunner.java:601)
+at org.testng.TestRunner.run(TestRunner.java:502)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.TestNG.privateMain(TestNG.java:1354)
+at org.testng.TestNG.main(TestNG.java:1323)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetId -->
+        <test-method status="PASS" signature="testGetFine()" name="testGetFine" duration-ms="8" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetFine -->
+        <test-method status="FAIL" signature="testGetLoan()" name="testGetLoan" duration-ms="8" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The test case is a prototype.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The test case is a prototype.
+at org.junit.Assert.fail(Assert.java:89)
+at model.PaymentTest.testGetLoan(PaymentTest.java:77)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
+at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
+at org.testng.TestRunner$1.run(TestRunner.java:570)
+at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:717)
+at org.testng.TestRunner.privateRunJUnit(TestRunner.java:601)
+at org.testng.TestRunner.run(TestRunner.java:502)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.TestNG.privateMain(TestNG.java:1354)
+at org.testng.TestNG.main(TestNG.java:1323)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetLoan -->
+        <test-method status="FAIL" signature="testSetPayment_date()" name="testSetPayment_date" duration-ms="159" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <exception class="org.junit.ComparisonFailure">
+            <message>
+              <![CDATA[expected:<[22/12/2023]> but was:<[]>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.junit.ComparisonFailure: expected:<[22/12/2023]> but was:<[]>
+at org.junit.Assert.assertEquals(Assert.java:117)
+at org.junit.Assert.assertEquals(Assert.java:146)
+at model.PaymentTest.testSetPayment_date(PaymentTest.java:221)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
+at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
+at org.testng.TestRunner$1.run(TestRunner.java:570)
+at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:717)
+at org.testng.TestRunner.privateRunJUnit(TestRunner.java:601)
+at org.testng.TestRunner.run(TestRunner.java:502)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.TestNG.privateMain(TestNG.java:1354)
+at org.testng.TestNG.main(TestNG.java:1323)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.junit.ComparisonFailure -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetPayment_date -->
+        <test-method status="FAIL" signature="testGetAmount_per_month()" name="testGetAmount_per_month" duration-ms="106" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The test case is a prototype.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The test case is a prototype.
+at org.junit.Assert.fail(Assert.java:89)
+at model.PaymentTest.testGetAmount_per_month(PaymentTest.java:104)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
+at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
+at org.testng.TestRunner$1.run(TestRunner.java:570)
+at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:717)
+at org.testng.TestRunner.privateRunJUnit(TestRunner.java:601)
+at org.testng.TestRunner.run(TestRunner.java:502)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.TestNG.privateMain(TestNG.java:1354)
+at org.testng.TestNG.main(TestNG.java:1323)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAmount_per_month -->
+        <test-method status="PASS" signature="testGetInterest_per_month()" name="testGetInterest_per_month" duration-ms="106" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetInterest_per_month -->
+        <test-method status="FAIL" signature="testSetFine()" name="testSetFine" duration-ms="46" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected:<321.0> but was:<0.0>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected:<321.0> but was:<0.0>
+at org.junit.Assert.fail(Assert.java:89)
+at org.junit.Assert.failNotEquals(Assert.java:835)
+at org.junit.Assert.assertEquals(Assert.java:555)
+at org.junit.Assert.assertEquals(Assert.java:685)
+at model.PaymentTest.testSetFine(PaymentTest.java:169)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
+at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
+at org.testng.TestRunner$1.run(TestRunner.java:570)
+at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:717)
+at org.testng.TestRunner.privateRunJUnit(TestRunner.java:601)
+at org.testng.TestRunner.run(TestRunner.java:502)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.TestNG.privateMain(TestNG.java:1354)
+at org.testng.TestNG.main(TestNG.java:1323)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetFine -->
+        <test-method status="PASS" signature="testSetPayment_amount()" name="testSetPayment_amount" duration-ms="8" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetPayment_amount -->
+        <test-method status="PASS" signature="testSetPay_date()" name="testSetPay_date" duration-ms="1" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetPay_date -->
+        <test-method status="PASS" signature="testGetPayment_date()" name="testGetPayment_date" duration-ms="46" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetPayment_date -->
+        <test-method status="PASS" signature="testIsStatus()" name="testIsStatus" duration-ms="46" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsStatus -->
+        <test-method status="FAIL" signature="testSetAmount_per_month()" name="testSetAmount_per_month" duration-ms="45" started-at="2023-04-25T07:40:15Z" finished-at="2023-04-25T07:40:15Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The test case is a prototype.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The test case is a prototype.
+at org.junit.Assert.fail(Assert.java:89)
+at model.PaymentTest.testSetAmount_per_month(PaymentTest.java:117)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at org.testng.junit.JUnit4TestRunner.start(JUnit4TestRunner.java:82)
+at org.testng.junit.JUnit4TestRunner.run(JUnit4TestRunner.java:70)
+at org.testng.TestRunner$1.run(TestRunner.java:570)
+at org.testng.TestRunner.runJUnitWorkers(TestRunner.java:717)
+at org.testng.TestRunner.privateRunJUnit(TestRunner.java:601)
+at org.testng.TestRunner.run(TestRunner.java:502)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.TestNG.privateMain(TestNG.java:1354)
+at org.testng.TestNG.main(TestNG.java:1323)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetAmount_per_month -->
+      </class> <!-- model.PaymentTest -->
+    </test> <!-- model.PaymentTest -->
+  </suite> <!-- SQALoanManagement -->
+</testng-results>

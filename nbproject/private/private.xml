@@ -3,15 +3,28 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/web/information.jsp</file>
-            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/web/loan.jsp</file>
-            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/web/loanBill.jsp</file>
-            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/web/contract.jsp</file>
-            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/web/homePage.jsp</file>
-            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/web/loanBillDetail.jsp</file>
-            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/web/loanSuccess.jsp</file>
-            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/web/calculator.jsp</file>
-            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/web/index.jsp</file>
+            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/src/java/DAO/DatabaseConnection.java</file>
+            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/test/model/AdminTest.java</file>
+            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/test/DAO/DatabaseConnectionTest.java</file>
+            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/src/java/model/Customer.java</file>
+            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/test/model/CustomerTest.java</file>
+            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/src/java/model/BankAccount.java</file>
+            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/src/java/controller/CalculatorServlet.java</file>
+            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/src/java/model/Admin.java</file>
+            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/test/DAO/DAOTest.java</file>
+            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/src/java/controller/InformationServlet.java</file>
+            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/src/java/controller/RegisterServlet.java</file>
+            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/test/model/InterestDetailTest.java</file>
+            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/test/model/BankAccountTest.java</file>
+            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/src/java/DAO/DAO.java</file>
+            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/src/java/controller/LoginServlet.java</file>
+            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/src/java/controller/LoanSuccessServlet.java</file>
+            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/src/java/controller/LoanBillDetailServlet.java</file>
+            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/test/model/PaymentTest.java</file>
+            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/src/java/model/Payment.java</file>
+            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/src/java/model/Loan.java</file>
+            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/src/java/controller/ContractServlet.java</file>
+            <file>file:/F:/ki%202%20nam%204/SQA/SQA_Loan/SQALoanManagement/test/model/LoanTest.java</file>
         </group>
     </open-files>
 </project-private>

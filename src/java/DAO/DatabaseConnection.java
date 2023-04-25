@@ -13,15 +13,19 @@ import java.sql.SQLException;
  * @author Legion
  */
 public class DatabaseConnection {
-    public static Connection con;
 
     //This method returns the database connection
-    public DatabaseConnection() {
+    public static Connection getDatabaseConnection() {
+        Connection con;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/sqaloan", "root", "");
+            return con;
         } catch (ClassNotFoundException | SQLException e) {
+
             System.out.println(e.getMessage());
+            return null;
         }
+
     }
 }

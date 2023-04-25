@@ -4,9 +4,7 @@
  */
 package controller;
 
-import DAO.BankAccountDAO;
-import DAO.InterestDetailDAO;
-import DAO.LoanDAO;
+import DAO.DAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
@@ -85,17 +83,15 @@ public class ContractServlet extends HttpServlet {
             int interestDetailId = Integer.parseInt(request.getParameter("interestDetailId"));
             long amount = Long.parseLong(request.getParameter("amount"));
 
-            LoanDAO loanDAO = new LoanDAO();
-            BankAccountDAO bankAccountDAO = new BankAccountDAO();
-            BankAccount account = bankAccountDAO.getBankAccountByID(bankAccountId);
-            InterestDetailDAO interestDetailDAO = new InterestDetailDAO();
-            InterestDetail interestDetail = interestDetailDAO.getInterestDetailByID(interestDetailId);
+            DAO dao = new DAO();
+            BankAccount account = dao.getBankAccountByID(bankAccountId);
+            InterestDetail interestDetail = dao.getInterestDetailByID(interestDetailId);
             Date current_date = new Date();
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             String date = sdf.format(current_date);
             Loan loan = new Loan(account, amount, interestDetail, date, false);
 
-            loanDAO.addLoan(loan);
+            dao.addLoan(loan);
             request.getRequestDispatcher("loanSuccess.jsp").forward(request, response);
         } catch (Exception e) {
             System.out.println(e);

@@ -5,7 +5,7 @@ package controller;
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 
-import DAO.CustomerDAO;
+import DAO.DAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -80,8 +80,8 @@ public class RegisterServlet extends HttpServlet {
             String username = request.getParameter("username");
             String password = request.getParameter("password");
             String samepassword = request.getParameter("samepassword");
-            CustomerDAO customerDAO = new CustomerDAO();
-            Customer customer = customerDAO.checkExistedCustomer(username);
+            DAO dao = new DAO();
+            Customer customer = dao.getCustomerByUsername(username);
             if (customer == null) {
                 request.setAttribute("username", username);
                 request.setAttribute("password", password);

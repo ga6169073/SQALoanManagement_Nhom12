@@ -4,11 +4,9 @@
  */
 package controller;
 
-import DAO.LoanDAO;
-import DAO.PaymentDAO;
+import DAO.DAO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.math.BigInteger;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -84,9 +82,8 @@ public class LoanSuccessServlet extends HttpServlet {
             throws ServletException, IOException {
         try {
             int accountId = Integer.parseInt(request.getParameter("accountid"));
-            LoanDAO loanDAO = new LoanDAO();
-            PaymentDAO paymentDAO = new PaymentDAO();
-            List<Loan> listloan = loanDAO.getLoanByBankAccountID(accountId);
+            DAO dao = new DAO();
+            List<Loan> listloan = dao.getLoanByBankAccountID(accountId);
             Loan loan = listloan.get(listloan.size() - 1);
             List<String> payment_date = generateDates(loan.getBegin_date(), loan.getInterestDetail().getTenor());
             List<Payment> listpayment = new ArrayList<>();
@@ -111,7 +108,7 @@ public class LoanSuccessServlet extends HttpServlet {
                 }
             }
 
-            paymentDAO.addPayments(listpayment);
+            dao.addPayments(listpayment);
             request.getRequestDispatcher("homePage.jsp").forward(request, response);
 
         } catch (Exception e) {

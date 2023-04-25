@@ -4,7 +4,7 @@
  */
 package controller;
 
-import DAO.LoanDAO;
+import DAO.DAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -62,10 +62,10 @@ public class LoanBillServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        LoanDAO loanDAO = new LoanDAO();
+        DAO dao = new DAO();
         HttpSession session = request.getSession();
         BankAccount account = (BankAccount) session.getAttribute("account");
-        List<Loan> listLoan = loanDAO.getLoanByBankAccountID(account.getId());
+        List<Loan> listLoan = dao.getLoanByBankAccountID(account.getId());
         request.setAttribute("listLoan", listLoan);
         request.getRequestDispatcher("loanBill.jsp").forward(request, response);
     }

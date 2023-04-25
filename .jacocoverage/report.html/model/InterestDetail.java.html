@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>InterestDetail.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;SQALoanManagement&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">model</a> &gt; <span class="el_source">InterestDetail.java</span></div><h1>InterestDetail.java</h1><pre class="source lang-java linenums">/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package model;
+
+import java.io.Serializable;
+
+/**
+ *
+ * @author Legion
+ */
+public class InterestDetail implements Serializable {
+
+    private int id;
+    private boolean loanType; // 0 la tra no theo thang // 1 la tra no giam dan
+    private int tenor;  // ky han
+    private float rate;
+    private int status; // trang thai: 0 khong kich hoat , 1 kich hoat, 2 da tung kich hoat
+    private Admin admin;
+
+<span class="fc" id="L22">    public InterestDetail() {</span>
+<span class="fc" id="L23">    }</span>
+
+<span class="fc" id="L25">    public InterestDetail(boolean loanType, int tenor, float rate, int status, Admin admin) {</span>
+<span class="fc" id="L26">        this.loanType = loanType;</span>
+<span class="fc" id="L27">        this.tenor = tenor;</span>
+<span class="fc" id="L28">        this.rate = rate;</span>
+<span class="fc" id="L29">        this.status = status;</span>
+<span class="fc" id="L30">        this.admin = admin;</span>
+<span class="fc" id="L31">    }</span>
+
+<span class="fc" id="L33">    public InterestDetail(int id, boolean loanType, int tenor, float rate, int status, Admin admin) {</span>
+<span class="fc" id="L34">        this.id = id;</span>
+<span class="fc" id="L35">        this.loanType = loanType;</span>
+<span class="fc" id="L36">        this.tenor = tenor;</span>
+<span class="fc" id="L37">        this.rate = rate;</span>
+<span class="fc" id="L38">        this.status = status;</span>
+<span class="fc" id="L39">        this.admin = admin;</span>
+<span class="fc" id="L40">    }</span>
+
+    public float getRate() {
+<span class="fc" id="L43">        return rate;</span>
+    }
+
+    public void setRate(float rate) {
+<span class="fc" id="L47">        this.rate = rate;</span>
+<span class="fc" id="L48">    }</span>
+
+    public int getId() {
+<span class="fc" id="L51">        return id;</span>
+    }
+
+    public void setId(int id) {
+<span class="fc" id="L55">        this.id = id;</span>
+<span class="fc" id="L56">    }</span>
+
+    public boolean isLoanType() {
+<span class="fc" id="L59">        return loanType;</span>
+    }
+
+    public void setLoanType(boolean loanType) {
+<span class="fc" id="L63">        this.loanType = loanType;</span>
+<span class="fc" id="L64">    }</span>
+
+    public int getTenor() {
+<span class="fc" id="L67">        return tenor;</span>
+    }
+
+    public void setTenor(int tenor) {
+<span class="fc" id="L71">        this.tenor = tenor;</span>
+<span class="fc" id="L72">    }</span>
+
+    public int getStatus() {
+<span class="fc" id="L75">        return status;</span>
+    }
+
+    public void setStatus(int status) {
+<span class="fc" id="L79">        this.status = status;</span>
+<span class="fc" id="L80">    }</span>
+
+    public Admin getAdmin() {
+<span class="fc" id="L83">        return admin;</span>
+    }
+
+    public void setAdmin(Admin admin) {
+<span class="fc" id="L87">        this.admin = admin;</span>
+<span class="fc" id="L88">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

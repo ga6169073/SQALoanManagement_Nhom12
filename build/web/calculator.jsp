@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -61,14 +62,14 @@
             <c:if test="${requestScope.listPayment!=null}">
                 <table class="table text-center col-8 m-auto">
                     <tr>
-                        <td class="col-4">Số tiền vay: ${requestScope.amount} VND</td>
+                        <td class="col-4">Số tiền vay: <fmt:formatNumber type="number" maxFractionDigits="3" value="${requestScope.amount}"/> VND</td>
                         <td class="col-4">Thời gian vay: ${requestScope.tenor} tháng</td>
                         <td class="col-4">Lãi suất: ${requestScope.rate}%/năm</td>
                     </tr>
                     <tr>
                         <td class="col-4">Thời gian bắt đầu: ${requestScope.begin_date}</td>                   
                         <td class="col-4">Thời gian kết thúc: ${requestScope.end_date}</td>
-                        <td class="col-4">Tổng số tiền phải trả: ${requestScope.sum} VND</td>
+                        <td class="col-4">Tổng số tiền phải trả: <fmt:formatNumber type="number" maxFractionDigits="3" value="${requestScope.sum}"/> VND</td>
                     </tr>
                 </table>
                 <table class="table align-middle">
@@ -80,9 +81,9 @@
                     </tr>
                     <c:forEach items="${listPayment}" var="lp">
                         <tr>
-                            <td>${Math.round(lp.amount_per_month)}</td>
-                            <td>${Math.round(lp.interest_per_month)}</td>                         
-                            <td>${Math.round(lp.amount_per_month + lp.interest_per_month)}</td>
+                            <td> <fmt:formatNumber type="number" maxFractionDigits="3" value="${Math.round(lp.amount_per_month)}" /></td>
+                            <td><fmt:formatNumber type="number" maxFractionDigits="3" value="${Math.round(lp.interest_per_month)}"/></td>                         
+                            <td><fmt:formatNumber type="number" maxFractionDigits="3" value="${Math.round(lp.amount_per_month + lp.interest_per_month)}"/></td>
                             <td>${lp.payment_date}</td>
                         </tr>
                     </c:forEach>

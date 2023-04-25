@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>DAO.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;SQALoanManagement&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">DAO</a> &gt; <span class="el_source">DAO.java</span></div><h1>DAO.java</h1><pre class="source lang-java linenums">/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package DAO;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+import model.Admin;
+import model.BankAccount;
+import model.Customer;
+import model.InterestDetail;
+import model.Loan;
+import model.Payment;
+
+/**
+ *
+ * @author Legion
+ */
+<span class="fc" id="L25">public class DAO {</span>
+
+<span class="fc" id="L27">    public Connection con = DatabaseConnection.getDatabaseConnection();</span>
+
+
+    public Admin getAdminByID(int id) {
+<span class="fc" id="L31">        String sql = &quot;select * from Admin where id = ?&quot;;</span>
+        try {
+<span class="fc" id="L33">            PreparedStatement ps = con.prepareStatement(sql);</span>
+<span class="fc" id="L34">            ps.setInt(1, id);</span>
+<span class="fc" id="L35">            ResultSet rs = ps.executeQuery();</span>
+<span class="fc bfc" id="L36" title="All 2 branches covered.">            if (rs.next()) {</span>
+<span class="fc" id="L37">                Admin admin = new Admin(rs.getInt(&quot;id&quot;), rs.getString(&quot;username&quot;), rs.getString(&quot;password&quot;));</span>
+<span class="fc" id="L38">                return admin;</span>
+            }
+<span class="nc" id="L40">        } catch (SQLException e) {</span>
+<span class="nc" id="L41">            System.out.println(e);</span>
+<span class="fc" id="L42">        }</span>
+<span class="fc" id="L43">        return null;</span>
+    }
+
+    public void addBankAccount(BankAccount account) {
+<span class="fc" id="L47">        String sql = &quot;insert into Bank_Account(number, balance, customer_id) values (?, ?, ?)&quot;;</span>
+        try {
+<span class="fc" id="L49">            PreparedStatement st = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);</span>
+<span class="fc" id="L50">            st.setString(1, account.getNumber());</span>
+<span class="fc" id="L51">            st.setLong(2, account.getBalance());</span>
+<span class="fc" id="L52">            st.setInt(3, account.getCustomer().getId());</span>
+<span class="fc" id="L53">            st.executeUpdate();</span>
+<span class="fc" id="L54">            ResultSet generatedKeys = st.getGeneratedKeys();</span>
+<span class="pc bpc" id="L55" title="1 of 2 branches missed.">            if (generatedKeys.next()) {</span>
+<span class="fc" id="L56">                account.setId(generatedKeys.getInt(1));</span>
+            }
+<span class="fc" id="L58">        } catch (SQLException e) {</span>
+<span class="fc" id="L59">            System.out.println(e);</span>
+<span class="fc" id="L60">        }</span>
+<span class="fc" id="L61">    }</span>
+
+    public BankAccount getBankAccountByCustomer(Customer customer) {
+<span class="fc" id="L64">        String sql = &quot;select * from Bank_Account where customer_id = ?&quot;;</span>
+        try {
+<span class="fc" id="L66">            PreparedStatement ps = con.prepareStatement(sql);</span>
+<span class="fc" id="L67">            ps.setInt(1, customer.getId());</span>
+<span class="fc" id="L68">            ResultSet rs = ps.executeQuery();</span>
+<span class="fc bfc" id="L69" title="All 2 branches covered.">            if (rs.next()) {</span>
+<span class="fc" id="L70">                BankAccount a = new BankAccount(rs.getInt(&quot;id&quot;), rs.getString(&quot;number&quot;), rs.getLong(&quot;balance&quot;), customer);</span>
+<span class="fc" id="L71">                return a;</span>
+            }
+<span class="nc" id="L73">        } catch (SQLException e) {</span>
+<span class="nc" id="L74">            System.out.println(e);</span>
+<span class="fc" id="L75">        }</span>
+<span class="fc" id="L76">        return null;</span>
+    }
+
+    public BankAccount getBankAccountByNumber(String number) {
+<span class="fc" id="L80">        String sql = &quot;select * from Bank_Account where number = ?&quot;;</span>
+        try {
+<span class="fc" id="L82">            PreparedStatement ps = con.prepareStatement(sql);</span>
+<span class="fc" id="L83">            ps.setString(1, number);</span>
+<span class="fc" id="L84">            ResultSet rs = ps.executeQuery();</span>
+<span class="fc bfc" id="L85" title="All 2 branches covered.">            if (rs.next()) {</span>
+<span class="fc" id="L86">                BankAccount a = new BankAccount(rs.getInt(&quot;id&quot;), rs.getString(&quot;number&quot;), rs.getLong(&quot;balance&quot;), getCustomerByID(rs.getInt(&quot;customer_id&quot;)));</span>
+<span class="fc" id="L87">                return a;</span>
+            }
+<span class="nc" id="L89">        } catch (SQLException e) {</span>
+<span class="nc" id="L90">            System.out.println(e);</span>
+<span class="fc" id="L91">        }</span>
+<span class="fc" id="L92">        return null;</span>
+    }
+
+    public BankAccount getBankAccountByID(int id) {
+<span class="fc" id="L96">        String sql = &quot;select * from Bank_Account where id = ?&quot;;</span>
+        try {
+
+<span class="fc" id="L99">            PreparedStatement ps = con.prepareStatement(sql);</span>
+<span class="fc" id="L100">            ps.setInt(1, id);</span>
+<span class="fc" id="L101">            ResultSet rs = ps.executeQuery();</span>
+<span class="fc bfc" id="L102" title="All 2 branches covered.">            if (rs.next()) {</span>
+<span class="fc" id="L103">                BankAccount a = new BankAccount(rs.getInt(&quot;id&quot;), rs.getString(&quot;number&quot;), rs.getLong(&quot;balance&quot;), getCustomerByID(rs.getInt(&quot;customer_id&quot;)));</span>
+<span class="fc" id="L104">                return a;</span>
+            }
+<span class="nc" id="L106">        } catch (SQLException e) {</span>
+<span class="nc" id="L107">            System.out.println(e);</span>
+<span class="fc" id="L108">        }</span>
+<span class="fc" id="L109">        return null;</span>
+    }
+
+    public void updateBankAccount(BankAccount account) {
+<span class="fc" id="L113">        String sql = &quot;update Bank_Account set balance = ? where id = ?&quot;;</span>
+        try {
+
+<span class="fc" id="L116">            PreparedStatement ps = con.prepareStatement(sql);</span>
+<span class="fc" id="L117">            ps.setLong(1, account.getBalance());</span>
+<span class="fc" id="L118">            ps.setInt(2, account.getId());</span>
+<span class="fc" id="L119">            ps.executeUpdate();</span>
+<span class="nc" id="L120">        } catch (SQLException e) {</span>
+<span class="nc" id="L121">            System.out.println(e);</span>
+<span class="fc" id="L122">        }</span>
+<span class="fc" id="L123">    }</span>
+
+
+    public Customer checkID_Card(String card_id) {
+<span class="fc" id="L127">        String sql = &quot;select * from Customer where card_id = ?&quot;;</span>
+        try {
+
+<span class="fc" id="L130">            PreparedStatement ps = con.prepareStatement(sql);</span>
+<span class="fc" id="L131">            ps.setString(1, card_id);</span>
+<span class="fc" id="L132">            ResultSet rs = ps.executeQuery();</span>
+<span class="fc bfc" id="L133" title="All 2 branches covered.">            if (rs.next()) {</span>
+<span class="fc" id="L134">                Customer customer = new Customer(rs.getInt(&quot;id&quot;), rs.getString(&quot;name&quot;), rs.getString(&quot;address&quot;),</span>
+<span class="fc" id="L135">                        rs.getString(&quot;card_id&quot;), rs.getString(&quot;phonenumber&quot;), rs.getString(&quot;email&quot;), rs.getString(&quot;username&quot;), rs.getString(&quot;password&quot;), rs.getString(&quot;dob&quot;), rs.getBoolean(&quot;gender&quot;));</span>
+<span class="fc" id="L136">                return customer;</span>
+            }
+<span class="nc" id="L138">        } catch (SQLException e) {</span>
+<span class="nc" id="L139">            System.out.println(e);</span>
+<span class="fc" id="L140">        }</span>
+<span class="fc" id="L141">        return null;</span>
+    }
+
+    public void addCustomer(Customer customer) {
+<span class="fc" id="L145">        String sql = &quot;insert into Customer(name, address, card_id, phonenumber, email, username, password, dob, gender) values (?, ?, ?, ?, ?, ?, ?, ?, ?)&quot;;</span>
+        try {
+
+<span class="fc" id="L148">            PreparedStatement st = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);</span>
+<span class="fc" id="L149">            st.setString(1, customer.getName());</span>
+<span class="fc" id="L150">            st.setString(2, customer.getAddress());</span>
+<span class="fc" id="L151">            st.setString(3, customer.getCard_id());</span>
+<span class="fc" id="L152">            st.setString(4, customer.getPhonenumber());</span>
+<span class="fc" id="L153">            st.setString(5, customer.getEmail());</span>
+<span class="fc" id="L154">            st.setString(6, customer.getUsername());</span>
+<span class="fc" id="L155">            st.setString(7, customer.getPassword());</span>
+<span class="fc" id="L156">            st.setString(8, customer.getDob());</span>
+<span class="fc" id="L157">            st.setBoolean(9, customer.isGender());</span>
+<span class="fc" id="L158">            st.executeUpdate();</span>
+<span class="fc" id="L159">            ResultSet generatedKeys = st.getGeneratedKeys();</span>
+<span class="pc bpc" id="L160" title="1 of 2 branches missed.">            if (generatedKeys.next()) {</span>
+<span class="fc" id="L161">                customer.setId(generatedKeys.getInt(1));</span>
+            }
+<span class="nc" id="L163">        } catch (Exception e) {</span>
+<span class="nc" id="L164">            System.out.println(e);</span>
+<span class="fc" id="L165">        }</span>
+<span class="fc" id="L166">    }</span>
+
+    public Customer getCustomer(String username, String password) {
+<span class="fc" id="L169">        String sql = &quot;select * from Customer where username = ? and password = ?&quot;;</span>
+        try {
+
+<span class="fc" id="L172">            PreparedStatement ps = con.prepareStatement(sql);</span>
+<span class="fc" id="L173">            ps.setString(1, username);</span>
+<span class="fc" id="L174">            ps.setString(2, password);</span>
+<span class="fc" id="L175">            ResultSet rs = ps.executeQuery();</span>
+<span class="fc bfc" id="L176" title="All 2 branches covered.">            if (rs.next()) {</span>
+<span class="fc" id="L177">                Customer c = new Customer(rs.getInt(&quot;id&quot;), rs.getString(&quot;name&quot;), rs.getString(&quot;address&quot;), rs.getString(&quot;card_id&quot;), rs.getString(&quot;phonenumber&quot;), rs.getString(&quot;email&quot;), rs.getString(&quot;username&quot;), rs.getString(&quot;password&quot;), rs.getString(&quot;dob&quot;), rs.getBoolean(&quot;gender&quot;));</span>
+<span class="fc" id="L178">                return c;</span>
+            }
+<span class="nc" id="L180">        } catch (SQLException e) {</span>
+<span class="nc" id="L181">            System.out.println(e);</span>
+<span class="fc" id="L182">        }</span>
+<span class="fc" id="L183">        return null;</span>
+    }
+
+    public Customer getCustomerByID(int id) {
+<span class="fc" id="L187">        String sql = &quot;select * from Customer where id = ?&quot;;</span>
+        try {
+
+<span class="fc" id="L190">            PreparedStatement ps = con.prepareStatement(sql);</span>
+<span class="fc" id="L191">            ps.setInt(1, id);</span>
+<span class="fc" id="L192">            ResultSet rs = ps.executeQuery();</span>
+<span class="fc bfc" id="L193" title="All 2 branches covered.">            if (rs.next()) {</span>
+<span class="fc" id="L194">                Customer c = new Customer(rs.getInt(&quot;id&quot;), rs.getString(&quot;name&quot;), rs.getString(&quot;address&quot;), rs.getString(&quot;card_id&quot;), rs.getString(&quot;phonenumber&quot;), rs.getString(&quot;email&quot;), rs.getString(&quot;username&quot;), rs.getString(&quot;password&quot;), rs.getString(&quot;dob&quot;), rs.getBoolean(&quot;gender&quot;));</span>
+<span class="fc" id="L195">                return c;</span>
+            }
+<span class="nc" id="L197">        } catch (SQLException e) {</span>
+<span class="nc" id="L198">            System.out.println(e);</span>
+<span class="fc" id="L199">        }</span>
+<span class="fc" id="L200">        return null;</span>
+    }
+
+    public Customer getCustomerByUsername(String username) {
+<span class="fc" id="L204">        String sql = &quot;select * from Customer where username = ?&quot;;</span>
+        try {
+
+<span class="fc" id="L207">            PreparedStatement ps = con.prepareStatement(sql);</span>
+<span class="fc" id="L208">            ps.setString(1, username);</span>
+<span class="fc" id="L209">            ResultSet rs = ps.executeQuery();</span>
+<span class="fc bfc" id="L210" title="All 2 branches covered.">            if (rs.next()) {</span>
+<span class="fc" id="L211">                Customer c = new Customer(rs.getInt(&quot;id&quot;), rs.getString(&quot;name&quot;), rs.getString(&quot;address&quot;), rs.getString(&quot;card_id&quot;), rs.getString(&quot;phonenumber&quot;), rs.getString(&quot;email&quot;), rs.getString(&quot;username&quot;), rs.getString(&quot;password&quot;), rs.getString(&quot;dob&quot;), rs.getBoolean(&quot;gender&quot;));</span>
+<span class="fc" id="L212">                return c;</span>
+            }
+<span class="nc" id="L214">        } catch (SQLException e) {</span>
+<span class="nc" id="L215">            System.out.println(e);</span>
+<span class="fc" id="L216">        }</span>
+<span class="fc" id="L217">        return null;</span>
+    }
+
+    public void addInterest(InterestDetail interestDetail) {
+<span class="fc" id="L221">        String sql = &quot;insert into Interest_Detail(loan_type, tenor, rate, status, admin_id) values (?, ?, ?, ?, ?)&quot;;</span>
+        try {
+
+<span class="fc" id="L224">            PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);</span>
+<span class="fc" id="L225">            ps.setBoolean(1, interestDetail.isLoanType());</span>
+<span class="fc" id="L226">            ps.setInt(2, interestDetail.getTenor());</span>
+<span class="fc" id="L227">            ps.setFloat(3, interestDetail.getRate());</span>
+<span class="fc" id="L228">            ps.setInt(4, interestDetail.getStatus());</span>
+<span class="fc" id="L229">            ps.setInt(5, interestDetail.getAdmin().getId());</span>
+<span class="fc" id="L230">            ps.executeUpdate();</span>
+<span class="fc" id="L231">            ResultSet generatedKeys = ps.getGeneratedKeys();</span>
+<span class="pc bpc" id="L232" title="1 of 2 branches missed.">            if (generatedKeys.next()) {</span>
+<span class="fc" id="L233">                interestDetail.setId(generatedKeys.getInt(1));</span>
+            }
+<span class="nc" id="L235">        } catch (SQLException e) {</span>
+<span class="nc" id="L236">            System.out.println(e);</span>
+<span class="fc" id="L237">        }</span>
+<span class="fc" id="L238">    }</span>
+
+    public InterestDetail getInterestDetailByID(int id) {
+<span class="fc" id="L241">        String sql = &quot;select * from Interest_Detail where id = ?&quot;;</span>
+        try {
+
+<span class="fc" id="L244">            PreparedStatement ps = con.prepareStatement(sql);</span>
+<span class="fc" id="L245">            ps.setInt(1, id);</span>
+<span class="fc" id="L246">            ResultSet rs = ps.executeQuery();</span>
+<span class="fc bfc" id="L247" title="All 2 branches covered.">            if (rs.next()) {</span>
+<span class="fc" id="L248">                InterestDetail interestDetail = new InterestDetail(rs.getInt(&quot;id&quot;), rs.getBoolean(&quot;loan_type&quot;), rs.getInt(&quot;tenor&quot;), rs.getFloat(&quot;rate&quot;), rs.getInt(&quot;status&quot;), getAdminByID(rs.getInt(&quot;admin_id&quot;)));</span>
+<span class="fc" id="L249">                return interestDetail;</span>
+            }
+<span class="nc" id="L251">        } catch (SQLException e) {</span>
+<span class="nc" id="L252">            System.out.println(e);</span>
+<span class="fc" id="L253">        }</span>
+<span class="fc" id="L254">        return null;</span>
+    }
+
+    public InterestDetail getInterestDetailAvailableByLoanTypeAndTenor(boolean type, int tenor) {
+<span class="fc" id="L258">        String sql = &quot;select * from Interest_Detail where loan_type = ? and tenor = ? and status = '1'&quot;;</span>
+<span class="fc" id="L259">        List&lt;InterestDetail&gt; list = new ArrayList&lt;&gt;();</span>
+        try {
+
+<span class="fc" id="L262">            PreparedStatement ps = con.prepareStatement(sql);</span>
+<span class="fc" id="L263">            ps.setBoolean(1, type);</span>
+<span class="fc" id="L264">            ps.setInt(2, tenor);</span>
+<span class="fc" id="L265">            ResultSet rs = ps.executeQuery();</span>
+<span class="fc bfc" id="L266" title="All 2 branches covered.">            if (rs.next()) {</span>
+<span class="fc" id="L267">                InterestDetail interestDetail = new InterestDetail(rs.getInt(&quot;id&quot;), rs.getBoolean(&quot;loan_type&quot;), rs.getInt(&quot;tenor&quot;), rs.getFloat(&quot;rate&quot;), rs.getInt(&quot;status&quot;), getAdminByID(rs.getInt(&quot;admin_id&quot;)));</span>
+<span class="fc" id="L268">                return interestDetail;</span>
+            }
+<span class="nc" id="L270">        } catch (SQLException e) {</span>
+<span class="nc" id="L271">            System.out.println(e);</span>
+<span class="fc" id="L272">        }</span>
+<span class="fc" id="L273">        return null;</span>
+    }
+
+//    ----------------------------------------
+    // Loan
+    public void addLoan(Loan loan) {
+<span class="fc" id="L279">        String sql = &quot;insert into Loan(bank_account_id, amount, interest_detail_id, begin_date, status) values (?, ?, ?, ?, ?)&quot;;</span>
+        try {
+
+<span class="fc" id="L282">            PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);</span>
+<span class="fc" id="L283">            ps.setInt(1, loan.getBankAccount().getId());</span>
+<span class="fc" id="L284">            ps.setLong(2, loan.getAmount());</span>
+<span class="fc" id="L285">            ps.setInt(3, loan.getInterestDetail().getId());</span>
+<span class="fc" id="L286">            ps.setString(4, loan.getBegin_date());</span>
+<span class="fc" id="L287">            ps.setBoolean(5, loan.isStatus());</span>
+<span class="fc" id="L288">            ps.executeUpdate();</span>
+<span class="fc" id="L289">            ResultSet generatedKeys = ps.getGeneratedKeys();</span>
+<span class="pc bpc" id="L290" title="1 of 2 branches missed.">            if (generatedKeys.next()) {</span>
+<span class="fc" id="L291">                loan.setId(generatedKeys.getInt(1));</span>
+            }
+<span class="nc" id="L293">        } catch (SQLException e) {</span>
+<span class="nc" id="L294">            System.out.println(e);</span>
+<span class="fc" id="L295">        }</span>
+<span class="fc" id="L296">    }</span>
+
+    public List&lt;Loan&gt; getLoanByBankAccountID(int bank_account_id) {
+<span class="fc" id="L299">        List&lt;Loan&gt; list = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L300">        String sql = &quot;select * from Loan where bank_account_id = ?&quot;;</span>
+        try {
+
+<span class="fc" id="L303">            PreparedStatement ps = con.prepareStatement(sql);</span>
+<span class="fc" id="L304">            ps.setInt(1, bank_account_id);</span>
+<span class="fc" id="L305">            ResultSet rs = ps.executeQuery();</span>
+<span class="fc bfc" id="L306" title="All 2 branches covered.">            while (rs.next()) {</span>
+<span class="fc" id="L307">                Loan l = new Loan(rs.getInt(&quot;id&quot;), getBankAccountByID(rs.getInt(&quot;bank_account_id&quot;)), rs.getLong(&quot;amount&quot;), getInterestDetailByID(rs.getInt(&quot;interest_detail_id&quot;)), rs.getString(&quot;begin_date&quot;), rs.getBoolean(&quot;status&quot;));</span>
+<span class="fc" id="L308">                list.add(l);</span>
+<span class="fc" id="L309">            }</span>
+<span class="nc" id="L310">        } catch (SQLException e) {</span>
+<span class="nc" id="L311">            System.out.println(e);</span>
+<span class="fc" id="L312">        }</span>
+<span class="fc" id="L313">        return list;</span>
+    }
+
+    public Loan getLoanByID(int id) {
+<span class="fc" id="L317">        String sql = &quot;select * from Loan where id = ?&quot;;</span>
+        try {
+
+<span class="fc" id="L320">            PreparedStatement ps = con.prepareStatement(sql);</span>
+<span class="fc" id="L321">            ps.setInt(1, id);</span>
+<span class="fc" id="L322">            ResultSet rs = ps.executeQuery();</span>
+<span class="fc bfc" id="L323" title="All 2 branches covered.">            if (rs.next()) {</span>
+<span class="fc" id="L324">                Loan l = new Loan(rs.getInt(&quot;id&quot;), getBankAccountByID(rs.getInt(&quot;bank_account_id&quot;)), rs.getLong(&quot;amount&quot;), getInterestDetailByID(rs.getInt(&quot;interest_detail_id&quot;)), rs.getString(&quot;begin_date&quot;), rs.getBoolean(&quot;status&quot;));</span>
+<span class="fc" id="L325">                return l;</span>
+            }
+<span class="nc" id="L327">        } catch (SQLException e) {</span>
+<span class="nc" id="L328">            System.out.println(e);</span>
+<span class="fc" id="L329">        }</span>
+<span class="fc" id="L330">        return null;</span>
+    }
+
+    public void updateLoan(Loan loan) {
+<span class="fc" id="L334">        String sql = &quot;update Loan set status = ? where id = ?&quot;;</span>
+        try {
+
+<span class="fc" id="L337">            PreparedStatement ps = con.prepareStatement(sql);</span>
+<span class="fc" id="L338">            ps.setBoolean(1, loan.isStatus());</span>
+<span class="fc" id="L339">            ps.setInt(2, loan.getId());</span>
+<span class="fc" id="L340">            ps.executeUpdate();</span>
+<span class="nc" id="L341">        } catch (SQLException e) {</span>
+<span class="nc" id="L342">            System.out.println(e);</span>
+<span class="fc" id="L343">        }</span>
+<span class="fc" id="L344">    }</span>
+
+//    ------------------------------------------------------
+    //Payment
+    public void addPayments(List&lt;Payment&gt; list) {
+<span class="fc" id="L349">        String sql = &quot;insert into Payment (loan_id, amount_per_month, interest_per_month, fine, status, payment_date, payment_amount, pay_date) values (?, ?, ?, ?, ?, ?, ?, ?)&quot;;</span>
+        try {
+<span class="fc bfc" id="L351" title="All 2 branches covered.">            for (Payment i : list) {</span>
+<span class="fc" id="L352">                PreparedStatement ps = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);</span>
+<span class="fc" id="L353">                ps.setInt(1, i.getLoan().getId());</span>
+<span class="fc" id="L354">                ps.setDouble(2, i.getAmount_per_month());</span>
+<span class="fc" id="L355">                ps.setDouble(3, i.getInterest_per_month());</span>
+<span class="fc" id="L356">                ps.setDouble(4, i.getFine());</span>
+<span class="fc" id="L357">                ps.setBoolean(5, i.isStatus());</span>
+<span class="fc" id="L358">                ps.setString(6, i.getPayment_date());</span>
+<span class="fc" id="L359">                ps.setLong(7, i.getPayment_amount());</span>
+<span class="fc" id="L360">                ps.setString(8, i.getPay_date());</span>
+<span class="fc" id="L361">                ps.executeUpdate();</span>
+<span class="fc" id="L362">                ResultSet generatedKeys = ps.getGeneratedKeys();</span>
+<span class="pc bpc" id="L363" title="1 of 2 branches missed.">                if (generatedKeys.next()) {</span>
+<span class="fc" id="L364">                    i.setId(generatedKeys.getInt(1));</span>
+                }
+<span class="fc" id="L366">            }</span>
+<span class="nc" id="L367">        } catch (SQLException e) {</span>
+<span class="nc" id="L368">            System.out.println(e);</span>
+<span class="fc" id="L369">        }</span>
+<span class="fc" id="L370">    }</span>
+
+    public List&lt;Payment&gt; getPaymentByLoanID(int loan_id) {
+<span class="fc" id="L373">        List&lt;Payment&gt; list = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L374">        String sql = &quot;select * from Payment where loan_id = ?&quot;;</span>
+        try {
+
+<span class="fc" id="L377">            PreparedStatement ps = con.prepareStatement(sql);</span>
+<span class="fc" id="L378">            ps.setInt(1, loan_id);</span>
+<span class="fc" id="L379">            ResultSet rs = ps.executeQuery();</span>
+<span class="fc bfc" id="L380" title="All 2 branches covered.">            while (rs.next()) {</span>
+<span class="fc" id="L381">                Payment p = new Payment(rs.getInt(&quot;id&quot;), getLoanByID(loan_id), rs.getDouble(&quot;amount_per_month&quot;),</span>
+<span class="fc" id="L382">                        rs.getDouble(&quot;interest_per_month&quot;), rs.getDouble(&quot;fine&quot;), rs.getBoolean(&quot;status&quot;),</span>
+<span class="fc" id="L383">                        rs.getString(&quot;payment_date&quot;), rs.getLong(&quot;payment_amount&quot;) ,</span>
+<span class="fc" id="L384">                        (rs.getString(&quot;pay_date&quot;) ));</span>
+<span class="fc" id="L385">                list.add(p);</span>
+<span class="fc" id="L386">            }</span>
+<span class="nc" id="L387">        } catch (SQLException e) {</span>
+<span class="nc" id="L388">            System.out.println(e);</span>
+<span class="fc" id="L389">        }</span>
+<span class="fc" id="L390">        return list;</span>
+    }
+
+    public void updatePaymentFineById(List&lt;Payment&gt; list) {
+<span class="fc" id="L394">        String sql = &quot;update Payment set fine = ? where id = ?&quot;;</span>
+        try {
+
+<span class="fc bfc" id="L397" title="All 2 branches covered.">            for (Payment i : list) {</span>
+<span class="fc" id="L398">                PreparedStatement ps = con.prepareStatement(sql);</span>
+<span class="fc" id="L399">                ps.setDouble(1, i.getFine());</span>
+<span class="fc" id="L400">                ps.setInt(2, i.getId());</span>
+<span class="fc" id="L401">                ps.executeUpdate();</span>
+<span class="fc" id="L402">            }</span>
+<span class="nc" id="L403">        } catch (SQLException e) {</span>
+<span class="nc" id="L404">            System.out.println(e);</span>
+<span class="fc" id="L405">        }</span>
+<span class="fc" id="L406">    }</span>
+
+    public Payment getPaymentById(int id) {
+<span class="fc" id="L409">        String sql = &quot;select * from Payment where id = ?&quot;;</span>
+        try {
+
+<span class="fc" id="L412">            PreparedStatement ps = con.prepareStatement(sql);</span>
+<span class="fc" id="L413">            ps.setInt(1, id);</span>
+<span class="fc" id="L414">            ResultSet rs = ps.executeQuery();</span>
+<span class="fc bfc" id="L415" title="All 2 branches covered.">            if (rs.next()) {</span>
+<span class="fc" id="L416">                Payment p = new Payment(rs.getInt(&quot;id&quot;), getLoanByID(rs.getInt(&quot;loan_id&quot;)), rs.getDouble(&quot;amount_per_month&quot;),</span>
+<span class="fc" id="L417">                        rs.getDouble(&quot;interest_per_month&quot;), rs.getDouble(&quot;fine&quot;), rs.getBoolean(&quot;status&quot;),</span>
+<span class="fc" id="L418">                        rs.getString(&quot;payment_date&quot;), rs.getLong(&quot;payment_amount&quot;) ,</span>
+<span class="fc" id="L419">                        (rs.getString(&quot;pay_date&quot;)));</span>
+<span class="fc" id="L420">                return p;</span>
+            }
+<span class="nc" id="L422">        } catch (SQLException e) {</span>
+<span class="nc" id="L423">            System.out.println(e);</span>
+<span class="fc" id="L424">        }</span>
+<span class="fc" id="L425">        return null;</span>
+    }
+
+    public void updatePayment(Payment payment) {
+<span class="fc" id="L429">        String sql = &quot;update Payment set pay_date = ?, payment_amount = ?, status = ? where id = ?&quot;;</span>
+        try {
+
+<span class="fc" id="L432">            PreparedStatement ps = con.prepareStatement(sql);</span>
+<span class="fc" id="L433">            ps.setString(1, payment.getPay_date());</span>
+<span class="fc" id="L434">            ps.setLong(2, payment.getPayment_amount());</span>
+<span class="fc" id="L435">            ps.setBoolean(3, true);</span>
+<span class="fc" id="L436">            ps.setInt(4, payment.getId());</span>
+<span class="fc" id="L437">            ps.executeUpdate();</span>
+<span class="nc" id="L438">        } catch (SQLException e) {</span>
+<span class="nc" id="L439">            System.out.println(e);</span>
+<span class="fc" id="L440">        }</span>
+<span class="fc" id="L441">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

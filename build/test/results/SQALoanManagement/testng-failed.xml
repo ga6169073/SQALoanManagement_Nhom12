@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SQALoanManagement]">
+  <test thread-count="5" name="model.CustomerTest(failed)" junit="true">
+    <classes>
+      <class name="org.junit.runner.Description">
+        <methods>
+          <include name="testSetId3"/>
+          <include name="testGetId2"/>
+          <include name="testSetDob"/>
+          <include name="testSetId2"/>
+          <include name="testGetName2"/>
+          <include name="testGetAddress2"/>
+        </methods>
+      </class> <!-- org.junit.runner.Description -->
+    </classes>
+  </test> <!-- model.CustomerTest(failed) -->
+  <test thread-count="5" name="model.PaymentTest(failed)" junit="true">
+    <classes>
+      <class name="org.junit.runner.Description">
+        <methods>
+          <include name="testSetPayment_date"/>
+          <include name="testSetAmount_per_month"/>
+          <include name="testSetId"/>
+          <include name="testGetId"/>
+          <include name="testSetLoan"/>
+          <include name="testGetLoan"/>
+          <include name="testGetAmount_per_month"/>
+          <include name="testSetFine"/>
+        </methods>
+      </class> <!-- org.junit.runner.Description -->
+    </classes>
+  </test> <!-- model.PaymentTest(failed) -->
+</suite> <!-- Failed suite [SQALoanManagement] -->

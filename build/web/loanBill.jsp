@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <%
     if (session.getAttribute("account") == null && session.getAttribute("accountid") == null) {
@@ -41,7 +42,7 @@
                     <tr >
                         <td class="align-middle">${loan.begin_date}</td>
                         <td class="align-middle">${loan.interestDetail.loanType ? "Vay nợ trả nợ giảm dần": "Vay nợ trả đều theo tháng"}</td>
-                        <td class="align-middle">${loan.amount} VND</td>
+                        <td class="align-middle"><fmt:formatNumber type="number" maxFractionDigits="3" value="${loan.amount}"/> VND</td>
                         <td class="align-middle">${loan.interestDetail.tenor}</td>
                         <td class="align-middle">${loan.interestDetail.rate}</td>
                         <td class="align-middle">${loan.status ? "Đã hoàn tất" : "Chưa hoàn tất"}</td>

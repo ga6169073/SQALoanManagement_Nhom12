@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -20,7 +21,7 @@
                 <input hidden name="accountid" value="${sessionScope.account.id}"/>
                 <h3>Xin chào: ${sessionScope.account.customer.name}</h3>
                 <h4>Tài khoản: ${sessionScope.account.number}</h4>
-                <h4>Số dư: ${sessionScope.account.balance} VND</h4>
+                <h4>Số dư: <fmt:formatNumber type="number" maxFractionDigits="3" value="${sessionScope.account.balance}"/> VND</h4>
             </div>
         </div>
     </body>

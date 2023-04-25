@@ -28,10 +28,10 @@
                             <label for="password">Mật khẩu: </label><br>
                             <input class="form-text form-control" type="password" id="password" name="password" required>
                         </div>
-                        <div class="form-check">
+<!--                        <div class="form-check">
                             <input class="form-check-input" type="checkbox" name="loginType" value="admin">
                             <label class="form-check-label" >Admin login?</label>
-                        </div>
+                        </div>-->
                         <br/>
                         <div class="form-group text-center">
                             <button type="submit" class="btn btn-primary text-center">ĐĂNG NHẬP</button>

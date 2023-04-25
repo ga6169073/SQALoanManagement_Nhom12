@@ -4,11 +4,9 @@
  */
 package controller;
 
-import DAO.LoanDAO;
-import DAO.PaymentDAO;
+import DAO.DAO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -39,7 +37,7 @@ public class LoanBillDetailServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try ( PrintWriter out = response.getWriter()) {
+        try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -65,14 +63,13 @@ public class LoanBillDetailServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        LoanDAO loanDAO = new LoanDAO();
-        PaymentDAO paymentDAO = new PaymentDAO();
+        DAO dao = new DAO();
         Date current_date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy");
         try {
             int id = Integer.parseInt(request.getParameter("id"));
-            Loan loan = loanDAO.getLoanByID(id);
-            List<Payment> listpayment = paymentDAO.getPaymentByLoanID(id);
+            Loan loan = dao.getLoanByID(id);
+            List<Payment> listpayment = dao.getPaymentByLoanID(id);
             for (Payment i : listpayment) {
                 Date payment_date = sdf.parse(i.getPayment_date());
                 long days_late = (current_date.getTime() - payment_date.getTime()) / (24 * 60 * 60 * 1000);
@@ -83,20 +80,18 @@ public class LoanBillDetailServlet extends HttpServlet {
                 }
             }
 
-            paymentDAO.updatePaymentByTimeandId(listpayment);
+            dao.updatePaymentFineById(listpayment);
             double sum = 0;
             for (Payment i : listpayment) {
                 sum += i.getAmount_per_month() + i.getInterest_per_month() + i.getFine();
             }
-            long sum_render = (long)Math.round(sum);
+            long sum_render = (long) Math.round(sum);
             request.setAttribute("loan", loan);
             request.setAttribute("end_date", listpayment.get(listpayment.size() - 1).getPayment_date());
             request.setAttribute("sum", sum_render);
             request.setAttribute("listpayment", listpayment);
             request.getRequestDispatcher("loanBillDetail.jsp").forward(request, response);
-        } catch (NumberFormatException e) {
-
-        } catch (ParseException e) {
+        } catch (Exception e) {
 
         }
     }

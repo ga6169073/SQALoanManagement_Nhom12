@@ -4,8 +4,7 @@
  */
 package controller;
 
-import DAO.BankAccountDAO;
-import DAO.CustomerDAO;
+import DAO.DAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Random;
@@ -77,16 +76,15 @@ public class RegisterSuccessServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String customer_username = request.getParameter("customerusername");
-        CustomerDAO customerDAO = new CustomerDAO();
-        BankAccountDAO bankAccountDAO = new BankAccountDAO();
-        Customer customer = customerDAO.getCustomerByUsername(customer_username);
+        DAO dao = new DAO();
+        Customer customer = dao.getCustomerByUsername(customer_username);
         String temp=generateBankNumber();
         
-        while(bankAccountDAO.getBankAccountByNumber(temp)!=null){
+        while(dao.getBankAccountByNumber(temp)!=null){
             temp = generateBankNumber();
         }
         BankAccount account = new BankAccount(temp, 0, customer);
-        bankAccountDAO.addBankAccount(account);
+        dao.addBankAccount(account);
         request.getRequestDispatcher("index.jsp").forward(request, response);
     }
 

@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <%
     if (session.getAttribute("account") == null && session.getAttribute("accountid") == null) {
@@ -71,7 +72,8 @@
 
                     <div class="form-group col-6">
                         <label for="amount">Số tiền muốn vay(VND): </label>
-                        <input name="amount" class="form-text form-control" value="${requestScope.amount}" readonly  ><br>
+                        <input name="amount"  value="${requestScope.amount}" hidden/>
+                        <input class="form-text form-control"  value="<fmt:formatNumber type="number" maxFractionDigits="3" value="${requestScope.amount}"/>" readonly  ><br>
                     </div>
                 </div>
                 <div class="form-row">

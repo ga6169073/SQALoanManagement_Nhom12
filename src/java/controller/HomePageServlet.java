@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import DAO.BankAccountDAO;
+import DAO.DAO;
 /**
  *
  * @author Legion
@@ -63,7 +63,7 @@ public class HomePageServlet extends HttpServlet {
         response.setContentType("text/html; charset=UTF-8");
         HttpSession session = request.getSession();
         try {
-            BankAccountDAO dao = new BankAccountDAO();
+            DAO dao = new DAO();
             BankAccount account = (BankAccount) session.getAttribute("account");
             account = dao.getBankAccountByID(account.getId());
 
@@ -71,6 +71,7 @@ public class HomePageServlet extends HttpServlet {
             request.getRequestDispatcher("homePage.jsp").forward(request, response);
 
         } catch (Exception e) {
+            System.out.println(e);
         }
 
     }

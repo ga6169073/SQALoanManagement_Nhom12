@@ -4,9 +4,7 @@
  */
 package controller;
 
-import DAO.AdminDAO;
-import DAO.BankAccountDAO;
-import DAO.CustomerDAO;
+import DAO.DAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -83,14 +81,11 @@ public class LoginServlet extends HttpServlet {
         try {
             String username = request.getParameter("username");
             String password = request.getParameter("password");
-            AdminDAO adminDAO = new AdminDAO();
-            CustomerDAO customerDAO = new CustomerDAO();
-            BankAccountDAO bankAccountDAO = new BankAccountDAO();
+            DAO dao = new DAO();
             String type = request.getParameter("loginType");
-            if (type == null) {
-                Customer customer = customerDAO.login(username, password);
+                Customer customer = dao.getCustomer(username, password);
                 if (customer != null) {
-                    BankAccount account = bankAccountDAO.getBankAccountByCustomer(customer);
+                    BankAccount account = dao.getBankAccountByCustomer(customer);
                     session.setAttribute("account", account);
                     session.setAttribute("role", "customer");
                     session.setMaxInactiveInterval(30 * 60);
@@ -100,17 +95,7 @@ public class LoginServlet extends HttpServlet {
                     request.getRequestDispatcher("login.jsp").forward(request, response);
                 }
                 
-            } else {
-                Admin admin = adminDAO.loginAdmin(username, password);
-                if (admin != null) {
-                    session.setAttribute("role", type);
-                    request.getRequestDispatcher("homePage.jsp").forward(request, response);
-                } else {
-                    request.setAttribute("message", "Tài khoản không tồn tại");
-                    request.getRequestDispatcher("login.jsp").forward(request, response);
-                }
-            }
-            
+                     
         } catch (Exception e) {
         }
     }

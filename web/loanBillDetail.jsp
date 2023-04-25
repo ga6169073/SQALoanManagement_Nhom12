@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix = "fmt" uri = "http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <%
     if (session.getAttribute("account") == null && session.getAttribute("accountid") == null) {
@@ -37,14 +38,14 @@
             </div>
             <table class="table text-center col-8 m-auto">
                 <tr>
-                    <td class="col-4">Số tiền vay: ${l.amount} VND</td>
+                    <td class="col-4">Số tiền vay: <fmt:formatNumber type="number" maxFractionDigits="3" value="${l.amount}"/> VND</td>
                     <td class="col-4">Thời gian vay: ${l.interestDetail.tenor} tháng</td>
                     <td class="col-4">Lãi suất: ${l.interestDetail.rate}%/năm</td>
                 </tr>
                 <tr>
                     <td class="col-4">Thời gian bắt đầu: ${l.begin_date}</td>                   
                     <td class="col-4">Thời gian kết thúc: ${requestScope.end_date}</td>
-                    <td class="col-4">Tổng số tiền phải trả: ${requestScope.sum} VND</td>
+                    <td class="col-4">Tổng số tiền phải trả: <fmt:formatNumber type="number" maxFractionDigits="3" value="${requestScope.sum}"/> VND</td>
                 </tr>
             </table>
             <p style="color: red; text-align: center" >${sessionScope.message != null ? sessionScope.message: ""}</p>   
@@ -67,14 +68,14 @@
                 </tr>
                 <c:forEach items="${listpayment}" var="lp">
                     <tr>
-                        <td>${Math.round(lp.amount_per_month)}</td>
-                        <td>${Math.round(lp.interest_per_month)}</td>                         
-                        <td>${Math.round(lp.amount_per_month + lp.interest_per_month + lp.fine)}</td>
+                        <td><fmt:formatNumber type="number" maxFractionDigits="3" value="${Math.round(lp.amount_per_month)}"/></td>
+                        <td><fmt:formatNumber type="number" maxFractionDigits="3" value="${Math.round(lp.interest_per_month)}"/></td>                         
+                        <td><fmt:formatNumber type="number" maxFractionDigits="3" value="${Math.round(lp.amount_per_month + lp.interest_per_month + lp.fine)}"/></td>
                         <td>${lp.payment_date}</td>
                         <td>${lp.payment_amount}</td>
                         <td>${Math.round(lp.fine)}</td>
                         <td>${lp.pay_date}</td>
-                        <td>${lp.status ? "Đã trả" : "Chưa trả"}</td>
+                        <td>${lp.status ? "Đã thanh toán" : "Chưa thanh toán"}</td>
                         <td><a class="btn btn-primary" href="#" onclick="doPay(${lp.id}, ${l.id}, ${a.id})" style="${lp.status ? 'pointer-events: none' : ''}">Thanh toán</a></td>
                     </tr>
                 </c:forEach>

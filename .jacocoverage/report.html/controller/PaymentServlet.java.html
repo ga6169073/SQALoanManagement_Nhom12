@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>PaymentServlet.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;SQALoanManagement&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">controller</a> &gt; <span class="el_source">PaymentServlet.java</span></div><h1>PaymentServlet.java</h1><pre class="source lang-java linenums">/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
+ */
+package controller;
+
+import DAO.DAO;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import model.BankAccount;
+import model.Loan;
+import model.Payment;
+
+/**
+ *
+ * @author Legion
+ */
+@WebServlet(name = &quot;PaymentServlet&quot;, urlPatterns = {&quot;/payment&quot;})
+<span class="nc" id="L28">public class PaymentServlet extends HttpServlet {</span>
+
+    /**
+     * Processes requests for both HTTP &lt;code&gt;GET&lt;/code&gt; and &lt;code&gt;POST&lt;/code&gt;
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+<span class="nc" id="L41">        response.setContentType(&quot;text/html;charset=UTF-8&quot;);</span>
+<span class="nc bnc" id="L42" title="All 2 branches missed.">        try ( PrintWriter out = response.getWriter()) {</span>
+            /* TODO output your page here. You may use following sample code. */
+<span class="nc" id="L44">            out.println(&quot;&lt;!DOCTYPE html&gt;&quot;);</span>
+<span class="nc" id="L45">            out.println(&quot;&lt;html&gt;&quot;);</span>
+<span class="nc" id="L46">            out.println(&quot;&lt;head&gt;&quot;);</span>
+<span class="nc" id="L47">            out.println(&quot;&lt;title&gt;Servlet PaymentServlet&lt;/title&gt;&quot;);</span>
+<span class="nc" id="L48">            out.println(&quot;&lt;/head&gt;&quot;);</span>
+<span class="nc" id="L49">            out.println(&quot;&lt;body&gt;&quot;);</span>
+<span class="nc" id="L50">            out.println(&quot;&lt;h1&gt;Servlet PaymentServlet at &quot; + request.getContextPath() + &quot;&lt;/h1&gt;&quot;);</span>
+<span class="nc" id="L51">            out.println(&quot;&lt;/body&gt;&quot;);</span>
+<span class="nc" id="L52">            out.println(&quot;&lt;/html&gt;&quot;);</span>
+<span class="nc bnc" id="L53" title="All 2 branches missed.">        }</span>
+<span class="nc" id="L54">    }</span>
+
+    // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;HttpServlet methods. Click on the + sign on the left to edit the code.&quot;&gt;
+    /**
+     * Handles the HTTP &lt;code&gt;GET&lt;/code&gt; method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+<span class="nc" id="L68">        String loan_id_raw = request.getParameter(&quot;lid&quot;);</span>
+<span class="nc" id="L69">        HttpSession session = request.getSession();</span>
+<span class="nc" id="L70">        DAO dao = new DAO();</span>
+<span class="nc" id="L71">        Date date = new Date();</span>
+<span class="nc" id="L72">        SimpleDateFormat sdf = new SimpleDateFormat(&quot;dd/MM/yyyy&quot;);</span>
+        try {
+<span class="nc" id="L74">            int id = Integer.parseInt(request.getParameter(&quot;id&quot;));</span>
+<span class="nc" id="L75">            int account_id = Integer.parseInt(request.getParameter(&quot;aid&quot;));</span>
+<span class="nc" id="L76">            int loan_id = Integer.parseInt(request.getParameter(&quot;lid&quot;));</span>
+<span class="nc" id="L77">            Loan loan = dao.getLoanByID(loan_id);</span>
+<span class="nc" id="L78">            BankAccount account = dao.getBankAccountByID(account_id);</span>
+<span class="nc" id="L79">            Payment payment = dao.getPaymentById(id);</span>
+<span class="nc" id="L80">            long total_amount = Math.round(payment.getAmount_per_month() + payment.getInterest_per_month() + payment.getFine());</span>
+<span class="nc bnc" id="L81" title="All 2 branches missed.">            if (account.getBalance()-total_amount &lt; 0) {</span>
+<span class="nc" id="L82">                session.setAttribute(&quot;message&quot;, &quot;Tài khoản không đủ tiền để thực hiện thanh toán&quot;);</span>
+            } else {
+<span class="nc" id="L84">                payment.setPay_date(sdf.format(date));</span>
+<span class="nc" id="L85">                payment.setPayment_amount(total_amount);</span>
+<span class="nc" id="L86">                payment.setStatus(true);</span>
+<span class="nc" id="L87">                session.setAttribute(&quot;balance_before&quot;, account.getBalance());</span>
+<span class="nc" id="L88">                account.setBalance(account.getBalance()-total_amount);</span>
+<span class="nc" id="L89">                dao.updateBankAccount(account);</span>
+<span class="nc" id="L90">                dao.updatePayment(payment);</span>
+<span class="nc" id="L91">                session.setAttribute(&quot;balance_after&quot;, account.getBalance());</span>
+            }
+<span class="nc" id="L93">            List&lt;Payment&gt; list = dao.getPaymentByLoanID(loan_id);</span>
+<span class="nc" id="L94">            int sum = 0;</span>
+<span class="nc bnc" id="L95" title="All 2 branches missed.">            for (Payment i : list) {</span>
+<span class="nc bnc" id="L96" title="All 2 branches missed.">                if (i.isStatus() == true) {</span>
+<span class="nc" id="L97">                    sum += 1;</span>
+                }
+<span class="nc" id="L99">            }</span>
+<span class="nc bnc" id="L100" title="All 2 branches missed.">            if (sum == list.size()) {</span>
+<span class="nc" id="L101">                loan.setStatus(true);</span>
+<span class="nc" id="L102">                dao.updateLoan(loan);</span>
+            }
+<span class="nc" id="L104">        } catch (Exception e) {</span>
+
+<span class="nc" id="L106">        }</span>
+<span class="nc" id="L107">        response.sendRedirect(&quot;loanBillDetail?id=&quot; + loan_id_raw);</span>
+<span class="nc" id="L108">    }</span>
+
+    /**
+     * Handles the HTTP &lt;code&gt;POST&lt;/code&gt; method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+<span class="nc" id="L121">        processRequest(request, response);</span>
+<span class="nc" id="L122">    }</span>
+
+    /**
+     * Returns a short description of the servlet.
+     *
+     * @return a String containing servlet description
+     */
+    @Override
+    public String getServletInfo() {
+<span class="nc" id="L131">        return &quot;Short description&quot;;</span>
+    }// &lt;/editor-fold&gt;
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

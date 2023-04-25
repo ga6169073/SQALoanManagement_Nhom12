@@ -4,9 +4,7 @@
  */
 package controller;
 
-import DAO.BankAccountDAO;
-import DAO.LoanDAO;
-import DAO.PaymentDAO;
+import DAO.DAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
@@ -69,18 +67,16 @@ public class PaymentServlet extends HttpServlet {
             throws ServletException, IOException {
         String loan_id_raw = request.getParameter("lid");
         HttpSession session = request.getSession();
-        BankAccountDAO bankAccountDAO = new BankAccountDAO();
-        PaymentDAO paymentDAO = new PaymentDAO();
-        LoanDAO loanDAO = new LoanDAO();
+        DAO dao = new DAO();
         Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         try {
             int id = Integer.parseInt(request.getParameter("id"));
             int account_id = Integer.parseInt(request.getParameter("aid"));
             int loan_id = Integer.parseInt(request.getParameter("lid"));
-            Loan loan = loanDAO.getLoanByID(loan_id);
-            BankAccount account = bankAccountDAO.getBankAccountByID(account_id);
-            Payment payment = paymentDAO.getPaymentById(id);
+            Loan loan = dao.getLoanByID(loan_id);
+            BankAccount account = dao.getBankAccountByID(account_id);
+            Payment payment = dao.getPaymentById(id);
             long total_amount = Math.round(payment.getAmount_per_month() + payment.getInterest_per_month() + payment.getFine());
             if (account.getBalance()-total_amount < 0) {
                 session.setAttribute("message", "Tài khoản không đủ tiền để thực hiện thanh toán");
@@ -90,11 +86,11 @@ public class PaymentServlet extends HttpServlet {
                 payment.setStatus(true);
                 session.setAttribute("balance_before", account.getBalance());
                 account.setBalance(account.getBalance()-total_amount);
-                bankAccountDAO.updateBankAccount(account);
-                paymentDAO.updatePayment(payment);
+                dao.updateBankAccount(account);
+                dao.updatePayment(payment);
                 session.setAttribute("balance_after", account.getBalance());
             }
-            List<Payment> list = paymentDAO.getPaymentByLoanID(loan_id);
+            List<Payment> list = dao.getPaymentByLoanID(loan_id);
             int sum = 0;
             for (Payment i : list) {
                 if (i.isStatus() == true) {
@@ -103,9 +99,9 @@ public class PaymentServlet extends HttpServlet {
             }
             if (sum == list.size()) {
                 loan.setStatus(true);
-                loanDAO.updateLoan(loan);
+                dao.updateLoan(loan);
             }
-        } catch (NumberFormatException e) {
+        } catch (Exception e) {
 
         }
         response.sendRedirect("loanBillDetail?id=" + loan_id_raw);

@@ -4,7 +4,7 @@
  */
 package controller;
 
-import DAO.CustomerDAO;
+import DAO.DAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
@@ -93,7 +93,7 @@ public class InformationServlet extends HttpServlet {
             boolean gender;
             if (gender_raw.equals("0")) gender = false;
             else gender = true;
-            CustomerDAO customerDAO = new CustomerDAO();
+            DAO customerDAO = new DAO();
             Customer customer_check = customerDAO.checkID_Card(id_card);
             if (customer_check == null) {
                 Customer customer = new Customer(name, address, id_card, phone, email, username, password, dob, gender);

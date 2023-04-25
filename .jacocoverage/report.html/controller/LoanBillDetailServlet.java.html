@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>LoanBillDetailServlet.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;SQALoanManagement&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">controller</a> &gt; <span class="el_source">LoanBillDetailServlet.java</span></div><h1>LoanBillDetailServlet.java</h1><pre class="source lang-java linenums">/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
+ */
+package controller;
+
+import DAO.DAO;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import model.Loan;
+import model.Payment;
+
+/**
+ *
+ * @author Legion
+ */
+@WebServlet(name = &quot;LoanBillDetailServlet&quot;, urlPatterns = {&quot;/loanBillDetail&quot;})
+<span class="nc" id="L26">public class LoanBillDetailServlet extends HttpServlet {</span>
+
+    /**
+     * Processes requests for both HTTP &lt;code&gt;GET&lt;/code&gt; and &lt;code&gt;POST&lt;/code&gt;
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+<span class="nc" id="L39">        response.setContentType(&quot;text/html;charset=UTF-8&quot;);</span>
+<span class="nc bnc" id="L40" title="All 2 branches missed.">        try (PrintWriter out = response.getWriter()) {</span>
+            /* TODO output your page here. You may use following sample code. */
+<span class="nc" id="L42">            out.println(&quot;&lt;!DOCTYPE html&gt;&quot;);</span>
+<span class="nc" id="L43">            out.println(&quot;&lt;html&gt;&quot;);</span>
+<span class="nc" id="L44">            out.println(&quot;&lt;head&gt;&quot;);</span>
+<span class="nc" id="L45">            out.println(&quot;&lt;title&gt;Servlet LoanBillDetailServlet&lt;/title&gt;&quot;);</span>
+<span class="nc" id="L46">            out.println(&quot;&lt;/head&gt;&quot;);</span>
+<span class="nc" id="L47">            out.println(&quot;&lt;body&gt;&quot;);</span>
+<span class="nc" id="L48">            out.println(&quot;&lt;h1&gt;Servlet LoanBillDetailServlet at &quot; + request.getContextPath() + &quot;&lt;/h1&gt;&quot;);</span>
+<span class="nc" id="L49">            out.println(&quot;&lt;/body&gt;&quot;);</span>
+<span class="nc" id="L50">            out.println(&quot;&lt;/html&gt;&quot;);</span>
+<span class="nc bnc" id="L51" title="All 2 branches missed.">        }</span>
+<span class="nc" id="L52">    }</span>
+
+    // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;HttpServlet methods. Click on the + sign on the left to edit the code.&quot;&gt;
+    /**
+     * Handles the HTTP &lt;code&gt;GET&lt;/code&gt; method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+<span class="nc" id="L66">        DAO dao = new DAO();</span>
+<span class="nc" id="L67">        Date current_date = new Date();</span>
+<span class="nc" id="L68">        SimpleDateFormat sdf = new SimpleDateFormat(&quot;dd/MM/yy&quot;);</span>
+        try {
+<span class="nc" id="L70">            int id = Integer.parseInt(request.getParameter(&quot;id&quot;));</span>
+<span class="nc" id="L71">            Loan loan = dao.getLoanByID(id);</span>
+<span class="nc" id="L72">            List&lt;Payment&gt; listpayment = dao.getPaymentByLoanID(id);</span>
+<span class="nc bnc" id="L73" title="All 2 branches missed.">            for (Payment i : listpayment) {</span>
+<span class="nc" id="L74">                Date payment_date = sdf.parse(i.getPayment_date());</span>
+<span class="nc" id="L75">                long days_late = (current_date.getTime() - payment_date.getTime()) / (24 * 60 * 60 * 1000);</span>
+<span class="nc" id="L76">                double total = i.getAmount_per_month() + i.getInterest_per_month();</span>
+<span class="nc" id="L77">                float rate = loan.getInterestDetail().getRate();</span>
+<span class="nc bnc" id="L78" title="All 4 branches missed.">                if (days_late &gt; 0 &amp;&amp; i.getPayment_amount() &lt; total) {</span>
+<span class="nc" id="L79">                    i.setFine(rate * 1.5 / (rate * 365));</span>
+                }
+<span class="nc" id="L81">            }</span>
+
+<span class="nc" id="L83">            dao.updatePaymentFineById(listpayment);</span>
+<span class="nc" id="L84">            double sum = 0;</span>
+<span class="nc bnc" id="L85" title="All 2 branches missed.">            for (Payment i : listpayment) {</span>
+<span class="nc" id="L86">                sum += i.getAmount_per_month() + i.getInterest_per_month() + i.getFine();</span>
+<span class="nc" id="L87">            }</span>
+<span class="nc" id="L88">            long sum_render = (long) Math.round(sum);</span>
+<span class="nc" id="L89">            request.setAttribute(&quot;loan&quot;, loan);</span>
+<span class="nc" id="L90">            request.setAttribute(&quot;end_date&quot;, listpayment.get(listpayment.size() - 1).getPayment_date());</span>
+<span class="nc" id="L91">            request.setAttribute(&quot;sum&quot;, sum_render);</span>
+<span class="nc" id="L92">            request.setAttribute(&quot;listpayment&quot;, listpayment);</span>
+<span class="nc" id="L93">            request.getRequestDispatcher(&quot;loanBillDetail.jsp&quot;).forward(request, response);</span>
+<span class="nc" id="L94">        } catch (Exception e) {</span>
+
+<span class="nc" id="L96">        }</span>
+<span class="nc" id="L97">    }</span>
+
+    /**
+     * Handles the HTTP &lt;code&gt;POST&lt;/code&gt; method.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+<span class="nc" id="L110">        request.getRequestDispatcher(&quot;loanBillDetail.jsp&quot;).forward(request, response);</span>
+<span class="nc" id="L111">    }</span>
+
+    /**
+     * Returns a short description of the servlet.
+     *
+     * @return a String containing servlet description
+     */
+    @Override
+    public String getServletInfo() {
+<span class="nc" id="L120">        return &quot;Short description&quot;;</span>
+    }// &lt;/editor-fold&gt;
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

@@ -1,0 +1,269 @@
+<html>
+<head>
+<title>TestNG:  DAO.DAOTest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>DAO.DAOTest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>38/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Apr 25 14:40:13 ICT 2023</td>
+</tr>
+<tr><td>Total time:</td><td>1 seconds (1420 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='DAO.DAOTest.testAddBankAccount()'><b>testAddBankAccount</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>0</td>
+<td>testAddBankAccount(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testAddBankAccount2()'><b>testAddBankAccount2</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>1</td>
+<td>testAddBankAccount2(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testAddCustomer()'><b>testAddCustomer</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>0</td>
+<td>testAddCustomer(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testAddCustomer2()'><b>testAddCustomer2</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>0</td>
+<td>testAddCustomer2(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testAddInterest()'><b>testAddInterest</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>0</td>
+<td>testAddInterest(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testAddLoan()'><b>testAddLoan</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>0</td>
+<td>testAddLoan(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testAddPayments()'><b>testAddPayments</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>1</td>
+<td>testAddPayments(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testCheckID_Card()'><b>testCheckID_Card</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>1</td>
+<td>testCheckID_Card(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testCheckID_Card2()'><b>testCheckID_Card2</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>1</td>
+<td>testCheckID_Card2(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testGetAdminByID()'><b>testGetAdminByID</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>1</td>
+<td>testGetAdminByID(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testGetAdminByID2()'><b>testGetAdminByID2</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>0</td>
+<td>testGetAdminByID2(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testGetBankAccountByCustomer()'><b>testGetBankAccountByCustomer</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>0</td>
+<td>testGetBankAccountByCustomer(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testGetBankAccountByCustomer2()'><b>testGetBankAccountByCustomer2</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>1</td>
+<td>testGetBankAccountByCustomer2(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testGetBankAccountByID()'><b>testGetBankAccountByID</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>1</td>
+<td>testGetBankAccountByID(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testGetBankAccountByID2()'><b>testGetBankAccountByID2</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>0</td>
+<td>testGetBankAccountByID2(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testGetBankAccountByNumber()'><b>testGetBankAccountByNumber</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>0</td>
+<td>testGetBankAccountByNumber(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testGetBankAccountByNumber2()'><b>testGetBankAccountByNumber2</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>0</td>
+<td>testGetBankAccountByNumber2(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testGetCustomer()'><b>testGetCustomer</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>1</td>
+<td>testGetCustomer(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testGetCustomer2()'><b>testGetCustomer2</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>0</td>
+<td>testGetCustomer2(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testGetCustomerByID()'><b>testGetCustomerByID</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>0</td>
+<td>testGetCustomerByID(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testGetCustomerByID2()'><b>testGetCustomerByID2</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>1</td>
+<td>testGetCustomerByID2(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testGetCustomerByUsername()'><b>testGetCustomerByUsername</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>1</td>
+<td>testGetCustomerByUsername(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testGetCustomerByUsername2()'><b>testGetCustomerByUsername2</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>1</td>
+<td>testGetCustomerByUsername2(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testGetInterestDetailAvailableByLoanTypeAndTenor()'><b>testGetInterestDetailAvailableByLoanTypeAndTenor</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>1</td>
+<td>testGetInterestDetailAvailableByLoanTypeAndTenor(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testGetInterestDetailAvailableByLoanTypeAndTenor2()'><b>testGetInterestDetailAvailableByLoanTypeAndTenor2</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>1</td>
+<td>testGetInterestDetailAvailableByLoanTypeAndTenor2(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testGetInterestDetailByID()'><b>testGetInterestDetailByID</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>1</td>
+<td>testGetInterestDetailByID(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testGetInterestDetailByID2()'><b>testGetInterestDetailByID2</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>1</td>
+<td>testGetInterestDetailByID2(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testGetLoanByBankAccountID()'><b>testGetLoanByBankAccountID</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>1</td>
+<td>testGetLoanByBankAccountID(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testGetLoanByID()'><b>testGetLoanByID</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>0</td>
+<td>testGetLoanByID(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testGetLoanByID2()'><b>testGetLoanByID2</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>0</td>
+<td>testGetLoanByID2(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testGetPaymentById()'><b>testGetPaymentById</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>1</td>
+<td>testGetPaymentById(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testGetPaymentById2()'><b>testGetPaymentById2</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>1</td>
+<td>testGetPaymentById2(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testGetPaymentByLoanID()'><b>testGetPaymentByLoanID</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>0</td>
+<td>testGetPaymentByLoanID(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testUpdateBankAccount()'><b>testUpdateBankAccount</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>1</td>
+<td>testUpdateBankAccount(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testUpdateBankAccount2()'><b>testUpdateBankAccount2</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>1</td>
+<td>testUpdateBankAccount2(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testUpdateLoan()'><b>testUpdateLoan</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>1</td>
+<td>testUpdateLoan(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testUpdatePayment()'><b>testUpdatePayment</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>1</td>
+<td>testUpdatePayment(DAO.DAOTest)</td></tr>
+<tr>
+<td title='DAO.DAOTest.testUpdatePaymentFineById()'><b>testUpdatePaymentFineById</b><br>Test class: DAO.DAOTest</td>
+<td></td>
+<td>1</td>
+<td>testUpdatePaymentFineById(DAO.DAOTest)</td></tr>
+</table><p>
+</body>
+</html>

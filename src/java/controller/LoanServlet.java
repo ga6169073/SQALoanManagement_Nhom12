@@ -4,7 +4,7 @@
  */
 package controller;
 
-import DAO.InterestDetailDAO;
+import DAO.DAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -79,12 +79,12 @@ public class LoanServlet extends HttpServlet {
             Long amount = Long.parseLong(request.getParameter("loanAmount"));
             int tenor = Integer.parseInt(request.getParameter("loanTenor"));
 
-            InterestDetailDAO interestDetailDAO = new InterestDetailDAO();
+            DAO dao = new DAO();
             InterestDetail interestDetail = new InterestDetail();
             if (loanType == 0) {
-                interestDetail = interestDetailDAO.getInterestDetailAvailableByLoanTypeAndTenor(false, tenor);
+                interestDetail = dao.getInterestDetailAvailableByLoanTypeAndTenor(false, tenor);
             } else {
-                interestDetail = interestDetailDAO.getInterestDetailAvailableByLoanTypeAndTenor(true, tenor);
+                interestDetail = dao.getInterestDetailAvailableByLoanTypeAndTenor(true, tenor);
             }
             request.setAttribute("amount", amount);
             request.setAttribute("interestDetail", interestDetail);

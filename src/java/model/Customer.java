@@ -124,5 +124,6 @@ public class Customer implements Serializable{
     public void setGender(boolean gender) {
         this.gender = gender;
     }
+
     
 }
